@@ -9,67 +9,64 @@ Antonio Berlanga
 #####################
 Suggested tools and approach to implement in computational and statistical analysis
 
+- Conceptually the problem is simple: chain third party tools and custom scripts together to answer a specific question.
+
+- In practice this is a nightmare. It requires project discipline and very good statistical and scripting practices.
+
+- For example, in a genetic association project you might need: 
+	+ Genotype QC pipeline
+	+ Imputation pipeline
+	+ Association testing pipeline
+	+ Downstream annotation of significant SNPs
+
+- All of these require many programs (third party like plink), some custom scripts (like plotting and stats in R) and will probably need to be run in a high performance cluster.
+
+- Keeping track of results, re-running with different parameters, logging, version control, communicating with colleagues, etc. quickly becomes difficult. A systematic approach is needed from the beginning that will cut the overhead and allow all results and plots to be traced back to the commands, parameters, software versions, and any steps used to process the original data, in an easy, transparent way.
+
+- I have failed to do this and over time the costs can be high.
+
 - There are many tools out there that aim to put reproducibility in computational biology (or general data analysis) into practice (see list of pipeline review references for example).
 
 - We don't need to re-invent the wheel, simply to make best use of our collective skills and existing tools/approaches.
 
-- Languages and tools are secondary (only to an extent though).
+- Sound principles come first, languages and tools are secondary (although only to an extent).
 
-- However a general, common framework and way of working is necessary. 
+- However a general, common framework and way of working is necessary. After a lot of initial personal and group pain we should hopefully see gains.
 #####################
 
 #####################
 Using Python and UNIX philosophy as the building bases
 
-- A general proven approach to follow is one based on basic python organisation:
-	+ Scripts - Write stand-alon scripts which are callable from the CLI and can take arbitrary parameters
-	+ Modules - Include functions and code, which could be used by more than one script/pipeline, bundled by overall aim/function
-	+ Pipeline - a (ruffus) python script which chains multiple tasks and jobs and can be submitted to the cluster (managed by drmaa).
-	+ And ideally:
-		+ Unit tests - aim to test each script, parameter, function, with small, example data. Aimed for stability only (ie do new code changes mess up the expected results?). Use via Travis CI or Jenkins CI, integrated to GitHub (tests are automatically triggered after each commit, need configuration (eg yaml), data and expected result).
-		+ Report - aim to write a basic automated report that picks up some basic stats and plots for the pipeline (sphinx, markdown, or similar for example).
+- Python:
+	Python is a popular, well-supported, general programming language which is flexible, powerful and readable. A great choice overall for beginners. It can serve as the glue for pipelines even if many scripts and programs are in other languages. Ruby, Perl and others are largely equivalent. There are dozens of online source for learning and a very active community:
+	https://www.python.org/
+
+- Ultimately though a combination of bash, stats and programming is needed. Different people do/use different combinations.
+
+- Using python, R and *nix is pretty powerful and a well trodden path.
+
+- The main/basic idea is that you should hopefully be able to structure scripts into packages and re-use them (or at least freeze and present them on publication).
 
 - There's a lot out there on software structure, see for example:
-http://docs.python-guide.org/en/latest/writing/structure/
-http://intermediate-and-advanced-software-carpentry.readthedocs.io/en/latest/structuring-python.html
+	Design patterns : elements of reusable object-oriented software
+	https://www.amazon.co.uk/gp/product/0201633612/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0201633612&linkCode=as2&tag=anjabl-20
 
-UNIX phylosophy:
-https://en.wikipedia.org/wiki/Unix_philosophy
+	http://docs.python-guide.org/en/latest/writing/structure/
+	http://intermediate-and-advanced-software-carpentry.readthedocs.io/en/latest/structuring-python.html
 
-A classic book on UNIX:
-http://cs2.ist.unomaha.edu/~stanw/163/csci4500/UNIXProgrammingEnvironment.pdf
+- UNIX is at the heart of most of the common and powerful operating systems available
+	Phylosophy:
+		https://en.wikipedia.org/wiki/Unix_philosophy
+	A classic book on UNIX: 
+		The Unix Programming Environment (Prentice-Hall Software Series) Paperback – 1 Nov 1983
+		by Brian W. Kernighan (Author), Rob Pike (Author)
+		http://cs2.ist.unomaha.edu/~stanw/163/csci4500/UNIXProgrammingEnvironment.pdf
 
-A general update on the above:
-https://www.amazon.co.uk/Unix-Programming-Addison-Wesley-Professional-Computing/dp/0131429019
+	A general update on the above: 
+		The Art of Unix Programming (Addison-Wesley Professional Computing) Paperback – 23 Sep 2003
+		by Eric S. Raymond (Author)
+		https://www.amazon.co.uk/Unix-Programming-Addison-Wesley-Professional-Computing/dp/0131429019
 
-#####################
-
-#####################
-Other languages
-
-- Ultimately a combination of bash, stats and programming is needed. Different people do/use different combinations.
-- Using python, R and *nix is pretty powerful and a well trodden path.
-- In terms of packaging and structure projects and programs other languages do their own thing. 
-- The idea is that you should hopefully be able to structure scripts into packages and re-use them (or at least freeze and present them on publication).
-
-- For R for example, check:
-http://kbroman.org/pkg_primer/
-R package primer
-
-http://r-pkgs.had.co.nz/
-Welcome · R packages
-
-https://support.rstudio.com/hc/en-us/articles/200486488-Developing-Packages-with-RStudio
-Developing Packages with RStudio – RStudio Support
-
-https://support.rstudio.com/hc/en-us/articles/200486498-Package-Development-Prerequisites
-Package Development Prerequisites – RStudio Support
-
-http://www.cs.utexas.edu/~EWD/transcriptions/EWD03xx/EWD340.html
-E.W.Dijkstra Archive: The Humble Programmer (EWD 340)
-
-http://thecoatlessprofessor.com/programming/working-with-r-on-a-cluster/
-Working with R on a Cluster - The Coatless Professor
 #####################
 
 #####################
@@ -99,8 +96,9 @@ https://www.software.ac.uk/blog/2016-09-27-introduction-cgat
 - A lot of this work is in beta (as are most pipeline approaches, of which there are many).
 
 - CGAT Pipelines have their own backbone (for controlling jobs, communicating with the cluster, logging, software/package structuring, etc.). I'm still on the learning curve but think this is the best approaches because of its flexibility and power (once you get to grips with it).
+
 - See:
-https://github.com/CGATOxford/CGATPipelines/tree/master/CGATPipelines/Pipeline
+	https://github.com/CGATOxford/CGATPipelines/tree/master/CGATPipelines/Pipeline
 
 - CGAT is based on ruffus, a python pipeline tool which is flexible, powerful and readable:
 http://www.ruffus.org.uk/
@@ -113,13 +111,51 @@ http://www.ruffus.org.uk/
 	- The "system" (eg funders and current science practice) rewards results not repeatability
 
 - Managing packages, see conda, a great way to reduce the overhead:
-http://conda.pydata.org/docs/index.html
+	http://conda.pydata.org/docs/index.html
 #####################
 
+#####################
+Structuring code
+- A general proven approach to follow is one based on basic python organisation:
+	+ Scripts - Write stand-alon scripts which are callable from the CLI and can take arbitrary parameters
+	+ Modules - Include functions and code, which could be used by more than one script/pipeline, bundled by overall aim/function
+	+ Pipeline - a (ruffus) python script which chains multiple tasks and jobs and can be submitted to the cluster (managed by drmaa).
+	+ And ideally:
+		+ Unit tests - aim to test each script, parameter, function, with small, example data. Aimed for stability only (ie do new code changes mess up the expected results?). Use via Travis CI or Jenkins CI, integrated to GitHub (tests are automatically triggered after each commit, need configuration (eg yaml), data and expected result).
+		+ Report - aim to write a basic automated report that picks up some basic stats and plots for the pipeline (sphinx, markdown, or similar for example).
+
+- This can be achieved with a pipeline tool such as Ruffus, python as glue, *nix systems, and, optionally, CGAT Pipelines to help manage clusters, logging, execution, versioning and, more importantly, to work under a common framework.
+#####################
 
 #####################
 
 - Hopefully future pipelines can be written in the same way (to save time, for transparency, automation, re-use, etc.)
 
 
+#####################
+
+
+#####################
+Other languages
+
+- In terms of packaging and structuring of projects and programs other languages do their own thing.
+
+- For R for example, check:
+http://kbroman.org/pkg_primer/
+R package primer
+
+http://r-pkgs.had.co.nz/
+Welcome · R packages
+
+https://support.rstudio.com/hc/en-us/articles/200486488-Developing-Packages-with-RStudio
+Developing Packages with RStudio – RStudio Support
+
+https://support.rstudio.com/hc/en-us/articles/200486498-Package-Development-Prerequisites
+Package Development Prerequisites – RStudio Support
+
+http://www.cs.utexas.edu/~EWD/transcriptions/EWD03xx/EWD340.html
+E.W.Dijkstra Archive: The Humble Programmer (EWD 340)
+
+http://thecoatlessprofessor.com/programming/working-with-r-on-a-cluster/
+Working with R on a Cluster - The Coatless Professor
 #####################
