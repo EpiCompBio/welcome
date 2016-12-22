@@ -156,3 +156,28 @@ Tools to use
 	+ Sufficient computing resources: your laptop, a unix cluster, etc. depending on tasks and data
 	+ A general framework which is extendable, allows us to keep relatively sane, and enhances the above (CGAT Pipelines, Galaxy, etc.).
 #####################
+
+#####################
+Other languages
+
+- In terms of packaging and structuring of projects and programs other languages do their own thing.
+
+- For R for example, check:
+	http://kbroman.org/pkg_primer/
+	R package primer
+
+	http://r-pkgs.had.co.nz/
+	Welcome · R packages
+
+	https://support.rstudio.com/hc/en-us/articles/200486488-Developing-Packages-with-RStudio
+	Developing Packages with RStudio – RStudio Support
+
+	https://support.rstudio.com/hc/en-us/articles/200486498-Package-Development-Prerequisites
+	Package Development Prerequisites – RStudio Support
+
+	http://www.cs.utexas.edu/~EWD/transcriptions/EWD03xx/EWD340.html
+	E.W.Dijkstra Archive: The Humble Programmer (EWD 340)
+
+	http://thecoatlessprofessor.com/programming/working-with-r-on-a-cluster/
+	Working with R on a Cluster - The Coatless Professor
+#####################
