@@ -32,4 +32,5 @@ https://github.com/CGATOxford/CGATPipelines
 
 - A lot of this work is in beta (as are most pipeline approaches, of which there are many).
 
+- Hopefully future pipelines can be written in the same way (to save time, for transparency, automation, re-use, etc.)
 #####################
