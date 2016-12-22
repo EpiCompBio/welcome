@@ -25,22 +25,24 @@ can be used and/or understood by as many people as possible.
 
 - There are many guidelines and thoughts (see below for a few suggestions).
 
-- Ideally automation and re-usability
+- Data analysis (of any size) should aim to have:
+	- Clear, documented code
+	- Ideally automation and re-usability
 	- Unit testing at its basic: do my new code changes change my expected results?
-
-- The overall effort is towards reproducibility, sharing tools, teamwork, etc. 
-- The general idea is to write code which can be re-used, automated, is transparent, has version control, and all the best practice in data analysis that we can integrate. 
-
 #####################
 
 
 #####################
-Suggested tools and approach
+Suggested tools and approach to implement in computational and statistical analysis
 
-- There's no wheel re-invention, simply making best use of our collective skills and existing tools/approaches.
-- Languages and tools are secondary (to an extent).
+- There are many tools out there that aim to put the above into practice (see list of pipeline review references for example).
 
-- The general approach is based on basic python organisation:
+- We don't need to re-invent the wheel, simply to make best use of our collective skills and existing tools/approaches.
+- Languages and tools are secondary (only to an extent).
+
+- However...:
+
+- The general (suggested) approach is based on basic python organisation:
 	+ Scripts - Write stand-alon scripts which are callable from the CLI and can take arbitrary parameters
 	+ Modules - Include functions and code, which could be used by more than one script/pipeline, bundled by overall aim
 	+ Pipeline - a (ruffus) python script which chains multiple tasks and jobs and can be submitted to the cluster (managed by drmaa).
@@ -59,18 +61,18 @@ https://github.com/CGATOxford/CGATPipelines
 
 
 #####################
-Some tutorials, etc.
+- Some tutorials:
 
-- Github:
+Github:
 15 minute intro to GitHub:
 https://try.github.io/levels/1/challenges/1
 
-- Other training resources:
+Other training resources:
 http://swcarpentry.github.io/git-novice/
 https://github.github.io/on-demand/
 https://services.github.com/training/
 
-- Unix and command line basics if in need:
+Unix and command line basics:
 http://www.ee.surrey.ac.uk/Teaching/Unix/index.html
 http://swcarpentry.github.io/shell-novice/
 https://www.codecademy.com/learn/learn-the-command-line
@@ -96,4 +98,10 @@ http://science.sciencemag.org/content/334/6060/1226
 
 Enhancing reproducibility for computational methods
 http://science.sciencemag.org/content/354/6317/1240.full
+
+Liberating field science samples and data | Science
+http://science.sciencemag.org/content/351/6277/1024.full
+
+Promoting an open research culture | Science
+http://science.sciencemag.org/content/348/6242/1422.full
 #####################
