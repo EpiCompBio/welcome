@@ -23,27 +23,22 @@ can be used and/or understood by as many people as possible.
 	- Computer environment logging (e.g. what tools, what versions, what OS)
 	- Parameter logging
 
-- There's no wheel re-invention, simply making best use of our collective skills and existing tools/approaches.
+- There are many guidelines and thoughts (see below for a few suggestions).
 
-- There are many guidelines and thoughts (see below for a few suggestions):
-#####################
-
-
-#####################
-	- Ideally automation and re-usability
+- Ideally automation and re-usability
 	- Unit testing at its basic: do my new code changes change my expected results?
 
 - The overall effort is towards reproducibility, sharing tools, teamwork, etc. 
 - The general idea is to write code which can be re-used, automated, is transparent, has version control, and all the best practice in data analysis that we can integrate. 
-- I've suggested we follow the general CGAT approach (which in turn adopts many current computational best practice standards).
-- The tools of choice are python (and R to some extent, but any language is usable, the main principles are what matter).
 
-- We've created a Github account which is slowly starting to get used:
-https://github.com/EpiCompBio
+#####################
 
 
 #####################
-https://www.cgat.org/downloads/public/cgat/documentation/
+Suggested tools and approach
+
+- There's no wheel re-invention, simply making best use of our collective skills and existing tools/approaches.
+- Languages and tools are secondary (to an extent).
 
 - The general approach is based on basic python organisation:
 	+ Scripts - Write stand-alon scripts which are callable from the CLI and can take arbitrary parameters
@@ -52,10 +47,21 @@ https://www.cgat.org/downloads/public/cgat/documentation/
 	+ And ideally:
 		+ Unit tests - aim to test each script, parameter, function, with small, example data. Aimed for stability only (ie do new code changes mess up the expected results?). Use via Travis CI or Jenkins CI, integrated to GitHub (tests are automatically triggered after each commit, need configuration (eg yaml), data and expected result).
 		+ Report - aim to write a basic automated report that picks up some basic stats and plots for the pipeline (sphinx, markdown, or similar for example).
-#####################
+
+- The general approach I'm suggesting is the one followed by CGAT, which in turn adopts many current computational best practice standards). See:
+https://github.com/CGATOxford
+https://github.com/CGATOxford/cgat
+https://github.com/CGATOxford/CGATPipelines
+
+- A lot of this work is in beta (as are most pipeline approaches, of which there are many).
 
 #####################
-- Some tools, tutorials, etc.:
+
+
+#####################
+Some tutorials, etc.
+
+- Github:
 15 minute intro to GitHub:
 https://try.github.io/levels/1/challenges/1
 
