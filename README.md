@@ -1,8 +1,9 @@
-# welcome
-Welcome, general notes, explanations, and the like for the EpiCompBio group.
+# Welcome
 
-Here you should be able to find some general ideas, approaches as to what we're planning and how we want to work.
+Welcome, general notes, explanations and the like for the EpiCompBio group.
 
-Feel free to add your own, edit, comment, question, etc.
+The plan is to collectively build an approach that integrates reproducibility into our research.
 
-That plan is to build an approach that builds on reproducibility.
+Here you should be able to find some general ideas, introduction, references and the overall approach.
+
+As usual, feel free to add your own, edit, comment, question, etc.
