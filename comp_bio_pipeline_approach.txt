@@ -1,36 +1,95 @@
 #####################
 Antonio Berlanga
 22 Dec 2016
+
+(Disclaimer (!): I've been learning as I go and I still have a long way... Please add, discuss, correct, etc.)
 #####################
 
 
 #####################
 Suggested tools and approach to implement in computational and statistical analysis
 
-- There are many tools out there that aim to put the above into practice (see list of pipeline review references for example).
+- There are many tools out there that aim to put reproducibility in computational biology (or general data analysis) into practice (see list of pipeline review references for example).
 
 - We don't need to re-invent the wheel, simply to make best use of our collective skills and existing tools/approaches.
 
-- Languages and tools are secondary (only to an extent).
+- Languages and tools are secondary (only to an extent though).
 
 - However a general, common framework and way of working is necessary. 
+#####################
 
-- 
+#####################
+Using Python and UNIX philosophy as the building bases
 
-- The general (suggested) approach is based on basic python organisation:
+- A general proven approach to follow is one based on basic python organisation:
 	+ Scripts - Write stand-alon scripts which are callable from the CLI and can take arbitrary parameters
-	+ Modules - Include functions and code, which could be used by more than one script/pipeline, bundled by overall aim
+	+ Modules - Include functions and code, which could be used by more than one script/pipeline, bundled by overall aim/function
 	+ Pipeline - a (ruffus) python script which chains multiple tasks and jobs and can be submitted to the cluster (managed by drmaa).
 	+ And ideally:
 		+ Unit tests - aim to test each script, parameter, function, with small, example data. Aimed for stability only (ie do new code changes mess up the expected results?). Use via Travis CI or Jenkins CI, integrated to GitHub (tests are automatically triggered after each commit, need configuration (eg yaml), data and expected result).
 		+ Report - aim to write a basic automated report that picks up some basic stats and plots for the pipeline (sphinx, markdown, or similar for example).
 
-- The general approach I'm suggesting is the one followed by CGAT, which in turn adopts many current computational best practice standards). See:
+- There's a lot out there on software structure, see for example:
+http://docs.python-guide.org/en/latest/writing/structure/
+http://intermediate-and-advanced-software-carpentry.readthedocs.io/en/latest/structuring-python.html
+
+UNIX phylosophy:
+https://en.wikipedia.org/wiki/Unix_philosophy
+
+A classic book on UNIX:
+http://cs2.ist.unomaha.edu/~stanw/163/csci4500/UNIXProgrammingEnvironment.pdf
+
+A general update on the above:
+https://www.amazon.co.uk/Unix-Programming-Addison-Wesley-Professional-Computing/dp/0131429019
+
+#####################
+
+#####################
+Other languages
+
+- Ultimately a combination of bash, stats and programming is needed. Different people do/use different combinations.
+- Using python, R and *nix is pretty powerful and a well trodden path.
+- In terms of packaging and structure projects and programs other languages do their own thing. 
+- The idea is that you should hopefully be able to structure scripts into packages and re-use them (or at least freeze and present them on publication).
+
+- For R for example, check:
+http://kbroman.org/pkg_primer/
+R package primer
+
+http://r-pkgs.had.co.nz/
+Welcome · R packages
+
+https://support.rstudio.com/hc/en-us/articles/200486488-Developing-Packages-with-RStudio
+Developing Packages with RStudio – RStudio Support
+
+https://support.rstudio.com/hc/en-us/articles/200486498-Package-Development-Prerequisites
+Package Development Prerequisites – RStudio Support
+
+http://www.cs.utexas.edu/~EWD/transcriptions/EWD03xx/EWD340.html
+E.W.Dijkstra Archive: The Humble Programmer (EWD 340)
+
+http://thecoatlessprofessor.com/programming/working-with-r-on-a-cluster/
+Working with R on a Cluster - The Coatless Professor
+#####################
+
+#####################
+Actual tools and practice
+
+- The general approach I'm suggesting is the one followed by CGAT (www.cgat.org, where I used to work), which in turn adopts many current computational best practice standards). See:
 https://github.com/CGATOxford
 https://github.com/CGATOxford/cgat
 https://github.com/CGATOxford/CGATPipelines
+https://www.software.ac.uk/tags/cgat
+https://www.software.ac.uk/blog/2016-09-27-introduction-cgat
 
 - A lot of this work is in beta (as are most pipeline approaches, of which there are many).
+
+- CGAT Pipelines have their own backbone (for controlling jobs, communicating with the cluster, logging, software/package structuring, etc.). I'm still on the learning curve but think this is the best approaches because of its flexibility and power (once you get to grips with it).
+
+- CGAT is based on ruffus, a python pipeline tool:
+http://www.ruffus.org.uk/
+
+
 
 - Hopefully future pipelines can be written in the same way (to save time, for transparency, automation, re-use, etc.)
 #####################
