@@ -36,7 +36,8 @@ can be used and/or understood by as many people as possible.
 
 - We don't need to re-invent the wheel, simply to make best use of our collective skills and existing tools/approaches.
 
-- See the suggested tools and approaches for what we are thinking of and currently implementing/using.
+- See the suggested tools and approaches for what we are thinking of and currently implementing/using as well as the repos and tools that are/will appear in the EpiCompBio group.
+
 #####################
 
 
