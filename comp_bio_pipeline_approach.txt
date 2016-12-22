@@ -1,0 +1,35 @@
+#####################
+Antonio Berlanga
+22 Dec 2016
+#####################
+
+
+#####################
+Suggested tools and approach to implement in computational and statistical analysis
+
+- There are many tools out there that aim to put the above into practice (see list of pipeline review references for example).
+
+- We don't need to re-invent the wheel, simply to make best use of our collective skills and existing tools/approaches.
+
+- Languages and tools are secondary (only to an extent).
+
+- However a general, common framework and way of working is necessary. 
+
+- 
+
+- The general (suggested) approach is based on basic python organisation:
+	+ Scripts - Write stand-alon scripts which are callable from the CLI and can take arbitrary parameters
+	+ Modules - Include functions and code, which could be used by more than one script/pipeline, bundled by overall aim
+	+ Pipeline - a (ruffus) python script which chains multiple tasks and jobs and can be submitted to the cluster (managed by drmaa).
+	+ And ideally:
+		+ Unit tests - aim to test each script, parameter, function, with small, example data. Aimed for stability only (ie do new code changes mess up the expected results?). Use via Travis CI or Jenkins CI, integrated to GitHub (tests are automatically triggered after each commit, need configuration (eg yaml), data and expected result).
+		+ Report - aim to write a basic automated report that picks up some basic stats and plots for the pipeline (sphinx, markdown, or similar for example).
+
+- The general approach I'm suggesting is the one followed by CGAT, which in turn adopts many current computational best practice standards). See:
+https://github.com/CGATOxford
+https://github.com/CGATOxford/cgat
+https://github.com/CGATOxford/CGATPipelines
+
+- A lot of this work is in beta (as are most pipeline approaches, of which there are many).
+
+#####################
