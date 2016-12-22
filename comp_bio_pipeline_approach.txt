@@ -75,6 +75,20 @@ Working with R on a Cluster - The Coatless Professor
 #####################
 Actual tools and practice
 
+- In general, pipelines should ideally be:
+	- Configurable for available compute resources
+	- Not hard-coded: configurable for actual job parameters which will be arbitrary and project specific probably
+	- Well documented
+	- Run from the command line 
+	- Report extensive logging for debugging and versioning
+	- Easy to build on
+	- Runnable locally or on a cluster
+	- Able to handle single and multi-jobs
+	- Portable across computare environments
+	- ...
+
+- A big problem across the field is portability, currently without good answers though, but pipelines can go some way.
+	
 - The general approach I'm suggesting is the one followed by CGAT (www.cgat.org, where I used to work), which in turn adopts many current computational best practice standards). See:
 https://github.com/CGATOxford
 https://github.com/CGATOxford/cgat
@@ -85,11 +99,27 @@ https://www.software.ac.uk/blog/2016-09-27-introduction-cgat
 - A lot of this work is in beta (as are most pipeline approaches, of which there are many).
 
 - CGAT Pipelines have their own backbone (for controlling jobs, communicating with the cluster, logging, software/package structuring, etc.). I'm still on the learning curve but think this is the best approaches because of its flexibility and power (once you get to grips with it).
+- See:
+https://github.com/CGATOxford/CGATPipelines/tree/master/CGATPipelines/Pipeline
 
-- CGAT is based on ruffus, a python pipeline tool:
+- CGAT is based on ruffus, a python pipeline tool which is flexible, powerful and readable:
 http://www.ruffus.org.uk/
 
+- Limitations of CGAT (but common to these tools):
+	- Pipelines have many dependencies
+	- Setting up the initial environment is often very problematic
+	- Keeping track of packages and managing them is a big overhead
+	- There's a steep learning curve
+	- The "system" (eg funders and current science practice) rewards results not repeatability
 
+- Managing packages, see conda, a great way to reduce the overhead:
+http://conda.pydata.org/docs/index.html
+#####################
+
+
+#####################
 
 - Hopefully future pipelines can be written in the same way (to save time, for transparency, automation, re-use, etc.)
+
+
 #####################
