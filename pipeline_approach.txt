@@ -1,0 +1,77 @@
+#####################
+22 Dec 2016
+Antonio
+#####################
+
+#####################
+General approach:
+- The core idea is about reproducibility, creating good habits and learning together.
+- Reproducibility is the key principle. This (simply but not easily) requires discipline and a few tools that 
+can be used by all.
+
+- Best practice standards evolve but in general it would be great if our research:
+	- Can be reproduced (same question, same data, same code, same results)
+	- Can be replicated (by other labs using other experiments, data, analysis, technology, etc.)
+	- Is open source and code is re-usable (by us and others)
+
+- The above requires:
+	- Transparent, easy to read, well documented code
+	- Version control
+	- Ideally automation and re-usability
+	- Unit testing at its basic: do my new code changes change my expected results?
+
+- There's no wheel re-invention, simply making best use of our collective skills and existing tools/approaches.
+
+- There are many guidelines and thoughts, to name a few:
+PLOS Biology: Best Practices for Scientific Computing
+http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745
+
+PLOS Computational Biology: A Quick Guide to Organizing Computational 
+Biology Projects
+http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000424
+
+PLOS Computational Biology: Ten Simple Rules for a Computational 
+Biologist’s Laboratory Notebook
+http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004385
+
+Reproducible Research in Computational Science | Science
+http://science.sciencemag.org/content/334/6060/1226
+
+Enhancing reproducibility for computational methods
+http://science.sciencemag.org/content/354/6317/1240.full
+
+
+- The overall effort is towards reproducibility, sharing tools, teamwork, etc. 
+- The general idea is to write code which can be re-used, automated, is transparent, has version control, and all the best practice in data analysis that we can integrate. 
+- I've suggested we follow the general CGAT approach (which in turn adopts many current computational best practice standards).
+- The tools of choice are python (and R to some extent, but any language is usable, the main principles are what matter).
+
+- We've created a Github account which is slowly starting to get used:
+https://github.com/EpiCompBio
+
+- Some tools, tutorials, etc.:
+15 minute intro to GitHub:
+https://try.github.io/levels/1/challenges/1
+
+- Other training resources:
+http://swcarpentry.github.io/git-novice/
+https://github.github.io/on-demand/
+https://services.github.com/training/
+
+- Unix and command line basics if in need:
+http://www.ee.surrey.ac.uk/Teaching/Unix/index.html
+http://swcarpentry.github.io/shell-novice/
+https://www.codecademy.com/learn/learn-the-command-line
+
+- 
+https://www.cgat.org/downloads/public/cgat/documentation/
+
+- The general approach is based on basic python organisation:
+	+ Scripts - Write stand-alon scripts which are callable from the CLI and can take arbitrary parameters
+	+ Modules - Include functions and code, which could be used by more than one script/pipeline, bundled by overall aim
+	+ Pipeline - a (ruffus) python script which chains multiple tasks and jobs and can be submitted to the cluster (managed by drmaa).
+	+ And ideally:
+		+ Unit tests - aim to test each script, parameter, function, with small, example data. Aimed for stability only (ie do new code changes mess up the expected results?). Use via Travis CI or Jenkins CI, integrated to GitHub (tests are automatically triggered after each commit, need configuration (eg yaml), data and expected result).
+		+ Report - aim to write a basic automated report that picks up some basic stats and plots for the pipeline (sphinx, markdown, or similar for example).
+#####################
+
