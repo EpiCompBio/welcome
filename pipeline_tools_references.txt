@@ -1,3 +1,29 @@
 References and reviews of computational pipelines:
 
 
+https://www.ncbi.nlm.nih.gov/pubmed/23872175
+'Big data', Hadoop and cloud computing in genomics. - PubMed - NCBI
+
+http://databio.org/docker_bioconductor/#/title
+Using Docker Bioconductor containers
+
+http://www.ruffus.org.uk/index.html
+Ruffus — ruffus 2.6.3 documentation
+
+http://pypiper.readthedocs.io/en/latest/best-practices.html
+Best practices — pypiper 0.3 documentation
+
+http://bib.oxfordjournals.org/content/early/2016/03/23/bib.bbw020.full
+A review of bioinformatic pipeline frameworks
+
+https://github.com/ssadedin/bpipe
+ssadedin/bpipe: Bpipe - a tool for running and managing bioinformatics pipelines
+
+http://bioinformatics.oxfordjournals.org/content/28/19/2520.short
+Snakemake—a scalable bioinformatics workflow engine
+
+https://bioinformatics.oxfordjournals.org/content/31/11/1724.full
+Omics Pipe: a community-based framework for reproducible multi-omics data analysis
+
+http://ieeexplore.ieee.org/document/4786077/?reload=true&arnumber=4786077
+Scientific workflow systems - can one size fit all? - IEEE Xplore Document
