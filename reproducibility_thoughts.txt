@@ -28,7 +28,7 @@ can be used and/or understood by as many people as possible.
 - Data analysis (of any size) should aim to have:
 	- Clear, documented code
 	- Ideally automation and re-usability
-	- Unit testing at its basic: do my new code changes change my expected results?
+	- Unit testing at its basic: does my new code change my expected results?
 
 - We've started with this GitHub account (https://github.com/EpiCompBio/)
 
@@ -36,7 +36,7 @@ can be used and/or understood by as many people as possible.
 
 - We don't need to re-invent the wheel, simply to make best use of our collective skills and existing tools/approaches.
 
-- See the suggested tools and approaches for what we are thinking of and currently implementing/using as well as the repos and tools that are/will appear in the EpiCompBio group.
+- See the suggested approach and tools for what we are thinking of and currently implementing/using as well as the repos and tools that are/will appear in the EpiCompBio group.
 
 #####################
 
