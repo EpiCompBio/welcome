@@ -15,7 +15,11 @@ TO DO:
 - For Antonio: merge CGAT Py3 and test PBSPro again.
 - Antonio, David, Vangelis, Gao: Finish building the Genotype QC tool
 
-- Genotype QC is currently the first pipeline we'll build with these tools/approaches. Although not straightforward it'll essentially simply follow CGAT and Ruffus' workflow and tools.
+- Genotype QC is currently the first pipeline we'll build with these tools/approaches. Although not straightforward it'll essentially simply follow CGAT and Ruffus' workflow and tools. 
 
-- Hopefully others will follow with this or their own/existing approach to reproducible analysis.
+- Discuss with Ibrahim, Rui, Deborah: Matlab isn't open source, big problem: 
+	- Discuss Matlab users' needs and how principles can be applied without forcing others to learn new languages. 
+	- Can we simply creae Matlab scripts and run in Ruffus pipelines? Permissions?
+	- Matlab can still be open source (i.e. we can publish code but people without Matlab licence can't re-run/use/modify it?)
+  
 ############
