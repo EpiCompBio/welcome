@@ -1,0 +1,43 @@
+reStructuredText may provide the best tool as an accessible, flexible, readable, plain text, python based technical documentation option.
+
+It can be integrated with Sphinx for converting to html, pdf, etc. and for supporting multiple languages (not just Python).
+There are extensions for Mendeley and BibTex for citations.
+
+Very similar to Markdown. If webpages are the main objective maybe use this. 
+For technical documents maybe reStructuredText is better. 
+
+reStructuredText seems much easier than html and LaTex and travels much better as it is .txt and can be used as the source for later conversion.
+
+With python+docutils+sphinx it can be formatted to html, with pdflatex to pdf for example.
+
+reStructuredText can be transfomed to Markdown with Pandoc and then rendered as html.
+
+Images can be pulled in with e.g.:
+
+.. image:: /path/to/image.jpg
+
+
+Some references and blogs:
+http://www.sphinx-doc.org/en/1.5.1/tutorial.html
+First Steps with Sphinx — Sphinx 1.5.1 documentation
+
+http://zverovich.net/2016/06/16/rst-vs-markdown.html
+reStructuredText vs Markdown for documentation
+
+https://www.pydanny.com/markup-language-faceoff-lists.html
+Markup Language Faceoff: Lists
+
+https://varnish-cache.org/docs/2.1/phk/sphinx.html
+Why Sphinx and reStructuredText ? — Varnish version 2.1.5 documentation
+
+http://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/UsingBibTeXCitationsInSphinx.html
+Managing bibliographic citations in Sphinx — Wiser 0.1 documentation
+
+https://en.wikipedia.org/wiki/ReStructuredText
+reStructuredText - Wikipedia
+
+https://www.mendeley.com/reference-management/reference-manager
+Reference Manager | Mendeley
+
+https://en.wikipedia.org/wiki/Comparison_of_document_markup_languages
+
