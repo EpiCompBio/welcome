@@ -2,7 +2,13 @@ reStructuredText may provide the best tool as an accessible, flexible, readable,
 
 It can be integrated with Sphinx for converting to html, pdf, etc. and for supporting multiple languages (not just Python).
 
-There are extensions for Mendeley and BibTex for citations. See the Sphinx BibTeX extension:
+There are extensions for Mendeley and BibTex for citations. 
+Mendeley refs to check:
+Mendeley Python:
+http://mendeley-python.readthedocs.io/en/stable/
+http://emilien.tlapale.com/bibgen/doc/source/rest.html
+
+See the Sphinx BibTeX extension:
 http://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/UsingBibTeXCitationsInSphinx.html
 This is in beta though.
 BibTeX is the file format for jabref, a citation manager:
@@ -43,6 +49,10 @@ DocOnce may also be an option, looks nice:
 http://hplgit.github.io/doconce/doc/pub/slides/scientific_writing-1.html
 http://hplgit.github.io/doconce/doc/web/index.html
 http://hplgit.github.io/teamods/writing_reports/
+
+Blogs with comparisons:
+https://opensource.com/life/15/8/markup-lowdown
+http://hyperpolyglot.org/lightweight-markup
 
 http://zverovich.net/2016/06/16/rst-vs-markdown.html
 reStructuredText vs Markdown for documentation
