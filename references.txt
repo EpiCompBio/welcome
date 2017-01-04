@@ -27,3 +27,6 @@ Omics Pipe: a community-based framework for reproducible multi-omics data analys
 
 http://ieeexplore.ieee.org/document/4786077/?reload=true&arnumber=4786077
 Scientific workflow systems - can one size fit all? - IEEE Xplore Document
+
+Experiences with workflows for automating data-intensive bioinformatics
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4539931/
