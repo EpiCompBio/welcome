@@ -1,4 +1,6 @@
-reStructuredText may provide the best tool as an accessible, flexible, readable, plain text, python based technical documentation option.
+Notes on how to create technical documents
+
+reStructuredText may provide the best tool as an accessible, flexible, readable, plain text, python based technical documentation option. reST is the source format, Sphinx is a builder tool that transforms reStructuredText into different target output formats.
 
 It can be integrated with Sphinx for converting to html, pdf, etc. and for supporting multiple languages (not just Python).
 
@@ -7,6 +9,7 @@ Mendeley refs to check:
 Mendeley Python:
 http://mendeley-python.readthedocs.io/en/stable/
 http://emilien.tlapale.com/bibgen/doc/source/rest.html
+https://github.com/etlapale/bibgen
 
 See the Sphinx BibTeX extension:
 http://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/UsingBibTeXCitationsInSphinx.html
@@ -15,8 +18,11 @@ BibTeX is the file format for jabref, a citation manager:
 http://www.bibtex.org/
 http://www.jabref.org/
 
+The subdocument and include directives in reStructuredText can include external files.
+http://docutils.sourceforge.net/sandbox/package-doc/multiple-input-files.html#id6
+http://reinout.vanrees.org/weblog/2010/12/08/include-external-in-sphinx.html
 
-Very similar to Markdown. If webpages are the main objective maybe use this. 
+reStructuredText is similar to Markdown. If webpages are the main objective maybe use Markdown though. 
 For technical documents maybe reStructuredText is better. 
 
 reStructuredText seems much easier than html and LaTex and travels much better as it is .txt and can be used as the source for later conversion.
@@ -74,3 +80,11 @@ Reference Manager | Mendeley
 
 https://en.wikipedia.org/wiki/Comparison_of_document_markup_languages
 
+Writing Scientific Papers Using Markdown
+https://danieljhocking.wordpress.com/2014/12/09/writing-scientific-papers-using-markdown/
+
+How To Write Papers with Restructured Text 
+http://acooke.org/cute/HowToWrite1.html
+
+Standard format conversions between reST and LaTeX:
+http://goer.org/Journal/2011/01/publishing_with_sphinx_rest_and_sffms_latex.html
