@@ -35,7 +35,12 @@ Images can be pulled in with e.g.:
 
 .. image:: /path/to/image.jpg
 
-reStructuredText has poor support for math?
+reStructuredText also supports math
+
+Tracking changes is a problem though (between collaborators not using git):
+http://criticmarkup.com/
+
+
 
 ##################################
 Some references and blogs:
@@ -88,3 +93,15 @@ http://acooke.org/cute/HowToWrite1.html
 
 Standard format conversions between reST and LaTeX:
 http://goer.org/Journal/2011/01/publishing_with_sphinx_rest_and_sffms_latex.html
+
+Writing and publishing with Git and reST:
+https://jimmyg.org/blog/2009/my-experience-of-using-restructuredtext-to-write-the-definitive-guide-to-pylons.html
+
+There is some support for reST to Word:
+http://docutils.sourceforge.net/sandbox/rst2wordml/readme.html
+
+Sphinx tutorial:
+https://evolvingweb.ca/blog/writing-documentation-restructured-text-and-sphinx
+
+
+
