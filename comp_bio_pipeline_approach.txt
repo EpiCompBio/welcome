@@ -111,9 +111,8 @@ https://www.software.ac.uk/blog/2016-09-27-introduction-cgat
 
 - CGAT scripts and pipelines use popular, open source, mostly free, proven tools with excellent community support such as Python, R, Github, Travis CI, plus the myriad of genomics and biology software options for specific tasks.
 
-- A lot of this work is in beta (as are most pipeline approaches, of which there are many, galaxy is a well known one and could be an answer). For galaxy see for example:
+- A lot of this work is in beta (as are most pipeline approaches, of which there are many, galaxy is a well known one and could be an answer but version control, scalability and other issues exist). For galaxy see for example:
 	https://en.wikipedia.org/wiki/Galaxy_(computational_biology)
-	
 	https://www.biostars.org/p/50034/
 
 - CGAT is based on ruffus, a python pipeline tool which is flexible, powerful and readable (being python):
