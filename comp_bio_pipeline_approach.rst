@@ -1,9 +1,10 @@
-#####################
+#######################################################
+Notes on computational pipelines for biomedial research
+#######################################################
 :Author: Antonio Berlanga
 :Date: 22 Dec 2016
 
 (Disclaimer (!): I've been learning as I go and I still have a long way... Please add, discuss, correct, etc.)
-#####################
 
 
 
@@ -42,6 +43,7 @@ Using Python and UNIX philosophy as the building bases
 
 - Python:
 	Python is a popular, well-supported, general programming language which is flexible, powerful and readable. A great choice overall for beginners. It can serve as the glue for pipelines even if many scripts and programs are in other languages. Ruby, Perl and others are largely equivalent. There are dozens of online source for learning and a very active community:
+
 	https://www.python.org/
 
 - Ultimately a combination of unix (or equivalent compute environment), stats and programming is needed. Different people do/use different combinations.
@@ -52,18 +54,23 @@ Using Python and UNIX philosophy as the building bases
 
 - There's a lot out there on software structure, see for example:
 	Design patterns : elements of reusable object-oriented software
+	
 	https://www.amazon.co.uk/gp/product/0201633612/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0201633612&linkCode=as2&tag=anjabl-20
 	
 	Python Project Howto — Python Project Howto
+	
 	http://infinitemonkeycorps.net/docs/pph/
 
 	Organising my Python project - Stack Overflow
+	
 	http://stackoverflow.com/questions/391879/organising-my-python-project
 
 	Filesystem structure of a Python project - Jp Calderone
+	
 	http://jcalderone.livejournal.com/39794.html
 
 	Structuring Your Project — The Hitchhiker's Guide to Python
+	
 	http://docs.python-guide.org/en/latest/writing/structure/
 
 	http://intermediate-and-advanced-software-carpentry.readthedocs.io/en/latest/structuring-python.html
@@ -74,11 +81,13 @@ Using Python and UNIX philosophy as the building bases
 	A classic book on UNIX: 
 		The Unix Programming Environment (Prentice-Hall Software Series) Paperback – 1 Nov 1983
 		by Brian W. Kernighan (Author), Rob Pike (Author)
+		
 		http://cs2.ist.unomaha.edu/~stanw/163/csci4500/UNIXProgrammingEnvironment.pdf
 
 	A general update on the above: 
 		The Art of Unix Programming (Addison-Wesley Professional Computing) Paperback – 23 Sep 2003
 		by Eric S. Raymond (Author)
+		
 		https://www.amazon.co.uk/Unix-Programming-Addison-Wesley-Professional-Computing/dp/0131429019
 
 
@@ -175,19 +184,25 @@ Other languages
 
 - For R for example, check:
 	http://kbroman.org/pkg_primer/
+	
 	R package primer
 
 	http://r-pkgs.had.co.nz/
+	
 	Welcome · R packages
 
 	https://support.rstudio.com/hc/en-us/articles/200486488-Developing-Packages-with-RStudio
+	
 	Developing Packages with RStudio – RStudio Support
 
 	https://support.rstudio.com/hc/en-us/articles/200486498-Package-Development-Prerequisites
+	
 	Package Development Prerequisites – RStudio Support
 
 	http://www.cs.utexas.edu/~EWD/transcriptions/EWD03xx/EWD340.html
+	
 	E.W.Dijkstra Archive: The Humble Programmer (EWD 340)
 
 	http://thecoatlessprofessor.com/programming/working-with-r-on-a-cluster/
+	
 	Working with R on a Cluster - The Coatless Professor
