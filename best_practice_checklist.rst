@@ -1,8 +1,8 @@
-Source:
-https://f1000research.com/articles/5-2000/v1
-
-
 Box 1. Our complete list of potential topics to be indicative of good practices in software development.
+########################################################################################################
+
+Source:
+    https://f1000research.com/articles/5-2000/v1
 
 Each of these topics have quantitative and qualitative metrics that may help track the adoption of good practice and monitor compliance with the guidelines in life sciences.
 
