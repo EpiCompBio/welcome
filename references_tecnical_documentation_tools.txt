@@ -18,6 +18,11 @@ BibTeX is the file format for jabref, a citation manager:
 http://www.bibtex.org/
 http://www.jabref.org/
 
+Mendeley looks good but is now owned by Elsevier, JabRef looks like a good open source option, :
+http://www.jabref.org/
+https://en.wikipedia.org/wiki/JabRef
+It can import Endnote, might work with Word. It can export for Endnote format. Limited reference formats though. 
+
 The subdocument and include directives in reStructuredText can include external files.
 http://docutils.sourceforge.net/sandbox/package-doc/multiple-input-files.html#id6
 http://reinout.vanrees.org/weblog/2010/12/08/include-external-in-sphinx.html
@@ -40,8 +45,11 @@ reStructuredText also supports math
 Tracking changes is a problem though (between collaborators not using git):
 http://criticmarkup.com/
 
+Pandoc is a universal document converter:
+http://pandoc.org/
 
-
+R Markdown:
+http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html
 ##################################
 Some references and blogs:
 
@@ -102,6 +110,9 @@ http://docutils.sourceforge.net/sandbox/rst2wordml/readme.html
 
 Sphinx tutorial:
 https://evolvingweb.ca/blog/writing-documentation-restructured-text-and-sphinx
+
+Reference manager comparison:
+https://en.wikipedia.org/wiki/Comparison_of_reference_management_software
 
 
 
