@@ -1,34 +1,39 @@
-#####################
-22 Dec 2016
-Antonio
-#####################
+######################################
+Notes on reproducibility in biomedical research
+######################################
 
-#####################
+:Author: Antonio
+:Date: 22 Dec 2016
+
+
+
 General approach:
+#################
+
 - The core idea is about reproducibility, integrating best practice, creating good habits and learning together.
 - Reproducibility is the key principle. This (simply but not easily) requires discipline and a few tools that 
 can be used and/or understood by as many people as possible.
 
 - Our research needs to be:
-	- Reproducible (same question, same data, same code, same results)
-	- Replicable (by other labs using other experiments, data, analysis, technology, etc.)
-	- And ideally open source, open access and open data with code that is re-usable (by us and others)
+	+ Reproducible (same question, same data, same code, same results)
+	+ Replicable (by other labs using other experiments, data, analysis, technology, etc.)
+	+ And ideally open source, open access and open data with code that is re-usable (by us and others)
 
 - The above requires:
-	- Clear questions and hypotheses
-	- Accessible, read-only data (data collection and experiments largely already follow these guidelines but the same applies)
-	- Transparent, easy to read, well documented code
-	- Transparent, easy to read, well documented workflows (e.g. data processing steps and analysis)
-	- Software version control
-	- Computer environment logging (e.g. what tools, what versions, what OS)
-	- Parameter logging
+	+ Clear questions and hypotheses
+	+ Accessible, read-only data (data collection and experiments largely already follow these guidelines but the same applies)
+	+ Transparent, easy to read, well documented code
+	+ Transparent, easy to read, well documented workflows (e.g. data processing steps and analysis)
+	+ Software version control
+	+ Computer environment logging (e.g. what tools, what versions, what OS)
+	+ Parameter logging
 
 - There are many guidelines and thoughts (see below for a few suggestions).
 
 - Data analysis (of any size) should aim to have:
-	- Clear, documented code
-	- Ideally automation and re-usability
-	- Unit testing at its basic: does my new code change my expected results?
+	+ Clear, documented code
+	+ Ideally automation and re-usability
+	+ Unit testing at its basic: does my new code change my expected results?
 
 - We've started with this GitHub account (https://github.com/EpiCompBio/)
 
@@ -38,51 +43,56 @@ can be used and/or understood by as many people as possible.
 
 - See the suggested approach and tools for what we are thinking of and currently implementing/using as well as the repos and tools that are/will appear in the EpiCompBio group.
 
-#####################
 
+Some references and tutorials:
+##############################
 
-#####################
-- Some tutorials:
-
-Github:
+Github
 15 minute intro to GitHub:
+
 https://try.github.io/levels/1/challenges/1
 
+http://ndpsoftware.com/git-cheatsheet.html
+
+
 Other training resources:
+
 http://swcarpentry.github.io/git-novice/
+
 https://github.github.io/on-demand/
+
 https://services.github.com/training/
 
+
 Unix and command line basics:
+
 http://www.ee.surrey.ac.uk/Teaching/Unix/index.html
+
 http://swcarpentry.github.io/shell-novice/
+
 https://www.codecademy.com/learn/learn-the-command-line
-#####################
 
 
-#####################
-- A few references on data analysis and reproducibility:
+A few references on data analysis and reproducibility:
+######################################################
 
-PLOS Biology: Best Practices for Scientific Computing
+- PLOS Biology: Best Practices for Scientific Computing
 http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745
 
-PLOS Computational Biology: A Quick Guide to Organizing Computational 
-Biology Projects
+- PLOS Computational Biology: A Quick Guide to Organizing Computational Biology Projects
 http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000424
 
-PLOS Computational Biology: Ten Simple Rules for a Computational 
-Biologist’s Laboratory Notebook
+- PLOS Computational Biology: Ten Simple Rules for a Computational Biologist’s Laboratory Notebook
 http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004385
 
-Reproducible Research in Computational Science | Science
+- Reproducible Research in Computational Science | Science
 http://science.sciencemag.org/content/334/6060/1226
 
-Enhancing reproducibility for computational methods
+- Enhancing reproducibility for computational methods
 http://science.sciencemag.org/content/354/6317/1240.full
 
-Liberating field science samples and data | Science
+- Liberating field science samples and data | Science
 http://science.sciencemag.org/content/351/6277/1024.full
 
-Promoting an open research culture | Science
+- Promoting an open research culture | Science
 http://science.sciencemag.org/content/348/6242/1422.full
-#####################
