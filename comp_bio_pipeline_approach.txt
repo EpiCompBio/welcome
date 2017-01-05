@@ -1,13 +1,14 @@
 #####################
-Antonio Berlanga
-22 Dec 2016
+:Author: Antonio Berlanga
+:Date: 22 Dec 2016
 
 (Disclaimer (!): I've been learning as I go and I still have a long way... Please add, discuss, correct, etc.)
 #####################
 
 
-#####################
+
 Suggested tools and approach to implement in computational and statistical analysis
+###################################################################################
 
 - Conceptually the problem is simple: chain third party tools and custom scripts together to answer a specific scientific question.
 
@@ -34,11 +35,10 @@ Suggested tools and approach to implement in computational and statistical analy
 - Sound principles come first, languages and tools are secondary (to an extent, tools over time shape our thinking so good initial choices are important).
 
 - However a general, common framework and way of working is necessary. After a lot of initial personal and group pain we should hopefully see gains.
-#####################
 
 
-#####################
 Using Python and UNIX philosophy as the building bases
+######################################################
 
 - Python:
 	Python is a popular, well-supported, general programming language which is flexible, powerful and readable. A great choice overall for beginners. It can serve as the glue for pipelines even if many scripts and programs are in other languages. Ruby, Perl and others are largely equivalent. There are dozens of online source for learning and a very active community:
@@ -80,32 +80,31 @@ Using Python and UNIX philosophy as the building bases
 		The Art of Unix Programming (Addison-Wesley Professional Computing) Paperback – 23 Sep 2003
 		by Eric S. Raymond (Author)
 		https://www.amazon.co.uk/Unix-Programming-Addison-Wesley-Professional-Computing/dp/0131429019
-#####################
 
 
-#####################
 Actual tools and practice
+#########################
 
 - In general, pipelines should ideally be:
-	- Well documented
-	- Configurable for available compute resources
-	- Not hard-coded: configurable for actual job parameters which will be arbitrary and project specific probably
-	- Run from the command line 
-	- Report extensive logging for debugging and versioning
-	- Easy to build on
-	- Runnable locally or on a cluster
-	- Able to handle single and multi-jobs
-	- Portable across computational environments
-	- ...
+	+ Well documented
+	+ Configurable for available compute resources
+	+ Not hard-coded: configurable for actual job parameters which will be arbitrary and project specific probably
+	+ Run from the command line 
+	+ Report extensive logging for debugging and versioning
+	+ Easy to build on
+	+ Runnable locally or on a cluster
+	+ Able to handle single and multi-jobs
+	+ Portable across computational environments
+	+ ...
 
 - A big problem across the field is portability, currently without good answers, but pipelines can go some way towards this.
 	
 - The general approach I'm suggesting is the one followed by CGAT (www.cgat.org), which in turn adopts many current computational best practice standards). See:
-https://github.com/CGATOxford
-https://github.com/CGATOxford/cgat
-https://github.com/CGATOxford/CGATPipelines
-https://www.software.ac.uk/tags/cgat
-https://www.software.ac.uk/blog/2016-09-27-introduction-cgat
+	+ https://github.com/CGATOxford
+	+ https://github.com/CGATOxford/cgat
+	+ https://github.com/CGATOxford/CGATPipelines
+	+ https://www.software.ac.uk/tags/cgat
+	+ https://www.software.ac.uk/blog/2016-09-27-introduction-cgat
 
 - The CGAT Code Collection includes cgat scripts for genomics and CGAT Pipelines, a framework and set of ruffus based pipelines to run workflows in computational biology.
 
@@ -126,25 +125,24 @@ https://www.software.ac.uk/blog/2016-09-27-introduction-cgat
 	https://github.com/CGATOxford/CGATPipelines/tree/master/CGATPipelines/Pipeline
 
 - A pipeline example can be:
-	https://www.cgat.org/downloads/public/cgatpipelines/documentation/pipelines/pipeline_mapping.html
-	https://github.com/CGATOxford/CGATPipelines/tree/master/CGATPipelines/pipeline_mapping
-	https://github.com/CGATOxford/CGATPipelines/blob/master/CGATPipelines/PipelineMapping.py
-	https://github.com/CGATOxford/CGATPipelines/blob/master/CGATPipelines/pipeline_mapping.py
+	+ https://www.cgat.org/downloads/public/cgatpipelines/documentation/pipelines/pipeline_mapping.html
+	+ https://github.com/CGATOxford/CGATPipelines/tree/master/CGATPipelines/pipeline_mapping
+	+ https://github.com/CGATOxford/CGATPipelines/blob/master/CGATPipelines/PipelineMapping.py
+	+ https://github.com/CGATOxford/CGATPipelines/blob/master/CGATPipelines/pipeline_mapping.py
 
 - Limitations of CGAT (but common to these types of tools) are:
-	- Pipelines have many dependencies
-	- Setting up the initial environment is often very problematic
-	- Keeping track of packages and managing them is a big overhead
-	- There's a steep learning curve in general and to each pipeline/approach
-	- The "system" (eg funders and current science practice) rewards results not repeatability, so no time and little interest
+	+ Pipelines have many dependencies
+	+ Setting up the initial environment is often very problematic
+	+ Keeping track of packages and managing them is a big overhead
+	+ There's a steep learning curve in general and to each pipeline/approach
+	+ The "system" (eg funders and current science practice) rewards results not repeatability, so no time and little interest
 
 - On a side note, for managing packages see conda, a great way to reduce time spent on this:
 	http://conda.pydata.org/docs/index.html
-#####################
 
 
-#####################
 Structuring code
+################
 
 - A general, proven approach to follow is one based on basic python organisation:
 	+ Scripts - Write stand-alone scripts which are callable from the CLI and can take arbitrary parameters
@@ -155,11 +153,11 @@ Structuring code
 	+ Unit tests - aiming to test each script, parameter, function, with small, example data. Aimed for stability only (ie do new code changes mess up the expected results?). 
 	+ A good option is to use via Travis CI or Jenkins CI, integrated to GitHub (tests are automatically triggered after each commit, need configuration (eg yaml), data and expected result).
 	+ Report - aiming to write a basic automated report that picks up some basic stats, tables and plots from the pipeline results and puts them in one document (using e.g. sphinx, markdown, or similar tool).
-#####################
 
 
-#####################
+
 Tools to use
+############
 
 - All of the above can be achieved with:
 	+ Version control such as Github
@@ -168,10 +166,10 @@ Tools to use
 	+ Computation pipeline tool such as Ruffus
 	+ Sufficient computing resources: your laptop, a unix cluster, etc. depending on tasks and data
 	+ A general framework which is extendable, allows us to keep relatively sane, and enhances the above (CGAT Pipelines, Galaxy, etc.).
-#####################
 
-#####################
+
 Other languages
+###############
 
 - In terms of packaging and structuring of projects and programs other languages do their own thing.
 
@@ -193,4 +191,3 @@ Other languages
 
 	http://thecoatlessprofessor.com/programming/working-with-r-on-a-cluster/
 	Working with R on a Cluster - The Coatless Professor
-#####################
