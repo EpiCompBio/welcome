@@ -1,17 +1,19 @@
 ############
-Antonio 22 Dec 2016
+TO DO!
 ############
 
+:Author: Antonio 
+:Date: 22 Dec 2016
 
-############
+
 DONE:
+#####
 - The HPC team has installed ruffus and drmaa, these are working fine. David and I have been testing these and everything seems in order. 
 - I've installed (in my user space) the CGAT scripts and pipeline framework, others may need to do this as well later on. The CGAT tools work well for me, they required some manual installation of several of the python libraries though. I also made some changes so that they could communicate with PBS Pro, these work without problems. There has been a recent switch to python 3 though so I have to test the modifications in the CGAT scripts. Not expecting problems though (famous last words)...
-############
 
-
-############
 TO DO:
+######
+
 - For Antonio: merge CGAT Py3 and test PBSPro again.
 - Antonio, David, Vangelis, Gao: Finish building the Genotype QC tool
 
@@ -30,5 +32,3 @@ TO DO:
 - Integrate reST with e.g. Mendeley for reporting and citation manager
 - JISCMAIL
 - Code review flow/guide?
-
-############
