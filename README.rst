@@ -1,4 +1,6 @@
-# Welcome
+#######
+Welcome
+#######
 
 Welcome, general notes, explanations and the like for the EpiCompBio group.
 
