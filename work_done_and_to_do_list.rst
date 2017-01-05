@@ -14,16 +14,16 @@ DONE:
 TO DO:
 ######
 
+.. todo::
+::
+
 - For Antonio: merge CGAT Py3 and test PBSPro again.
 - Antonio, David, Vangelis, Gao: Finish building the Genotype QC tool
-
 - Genotype QC is currently the first pipeline we'll build with these tools/approaches. Although not straightforward it'll essentially simply follow CGAT and Ruffus' workflow and tools. 
-
 - Discuss with Ibrahim, Rui, Deborah: Matlab isn't open source, big problem: 
 	- Discuss Matlab users' needs and how principles can be applied without forcing others to learn new languages. 
 	- Can we simply creae Matlab scripts and run in Ruffus pipelines? Permissions?
 	- Matlab can still be open source (i.e. we can publish code but people without Matlab licence can't re-run/use/modify it?)
-
 - Add (hand) visualising diagram as first step
 - Integrate github with zenodo in order to deposit data, code, manuscript, etc. with DOI generation and release freeze for software citation?
 	https://zenodo.org/
