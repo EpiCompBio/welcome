@@ -98,6 +98,8 @@ TO DO:
 Some references and blogs:
 ##########################
 
+https://github.com/kiith-sa/RestructuredText-tutorial
+
 | http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html#restructured-text-rest-and-sphinx-cheatsheet
 
 | http://www.sphinx-doc.org/en/1.5.1/tutorial.html
