@@ -30,3 +30,15 @@ Scientific workflow systems - can one size fit all? - IEEE Xplore Document
 
 Experiences with workflows for automating data-intensive bioinformatics
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4539931/
+
+NLeSC Guide
+https://nlesc.gitbooks.io/guide/content/index.html
+
+Top 10 metrics for life science software good practices - F1000Research
+https://f1000research.com/articles/5-2000/v1
+
+danielskatz/sustaining-research-projects: sustainability models for research software projects
+https://github.com/danielskatz/sustaining-research-Projects
+
+Science Code Manifesto
+http://sciencecodemanifesto.org/
