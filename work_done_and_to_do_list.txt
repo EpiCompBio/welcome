@@ -28,5 +28,7 @@ TO DO:
 	https://guides.github.com/activities/citable-code/
 - Integrate unit tests
 - Integrate reST with e.g. Mendeley for reporting and citation manager
+- JISCMAIL
+- Code review flow/guide?
 
 ############
