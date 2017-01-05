@@ -15,7 +15,6 @@ TO DO:
 ######
 
 .. todo::
-::
 
 - For Antonio: merge CGAT Py3 and test PBSPro again.
 - Antonio, David, Vangelis, Gao: Finish building the Genotype QC tool
