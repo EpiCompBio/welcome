@@ -160,6 +160,3 @@ https://evolvingweb.ca/blog/writing-documentation-restructured-text-and-sphinx
 
 Reference manager comparison:
 https://en.wikipedia.org/wiki/Comparison_of_reference_management_software
-
-
-
