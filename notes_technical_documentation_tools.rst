@@ -12,7 +12,7 @@ restructuredText (reST, rST)
 - reStructuredText is similar to Markdown. If webpages are the main objective maybe use Markdown though. 
 For technical documents maybe reStructuredText is better. 
 
-- reStructuredText seems much easier than html and LaTex and travels much better as it is .txt and can be used as the source for later conversion.
+- reStructuredText seems much easier than html and LaTex and travels much better as it is plain text and can be used as the source for later conversion.
 
 - With python+docutils+sphinx it can be formatted to html, with pdflatex to pdf for example.
 
@@ -148,9 +148,11 @@ TO DO:
 Some references and blogs:
 ##########################
 
-https://github.com/kiith-sa/RestructuredText-tutorial
+| https://github.com/kiith-sa/RestructuredText-tutorial
+
 
 | http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html#restructured-text-rest-and-sphinx-cheatsheet
+
 
 | http://www.sphinx-doc.org/en/1.5.1/tutorial.html
 | First Steps with Sphinx — Sphinx 1.5.1 documentation
