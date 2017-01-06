@@ -72,11 +72,24 @@ http://docutils.sourceforge.net/docs/user/rst/demo.txt
 Miscellaneous
 #############
 
-- Pandoc is a universal document converter:
+- Pandoc is a universal document converter, it can do rST to ODT (for Word for example):
 http://pandoc.org/
 
 - R Markdown:
-http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html
+    + http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html
+    + https://nicercode.github.io/guides/reports/
+
+- R with rST and docutils and then conversion to any format (including ODT that can be opened with Word):
+    + https://www.r-project.org/conferences/useR-2010/abstracts/Dasgupta.pdf
+    + Examples, e.g. knitr for R with rst:
+        @ https://yihui.name/knitr/demo/minimal/
+        @ Input of R script for rST: https://github.com/yihui/knitr-examples/blob/master/006-minimal.Rrst
+        @ Output of the above: https://github.com/yihui/knitr-examples/blob/master/006-minimal.rst
+        @ http://www.agapow.net/science/data-science/writing-knitr-in-restructured-text/
+
+The downside is that these formats then don't easily (?) allow to run the code as a script from the command line:
+    + http://stackoverflow.com/questions/21512918/how-to-use-knitr-from-command-line-with-rscript-and-command-line-argument
+    + 
 
 TO DO:
 ######
@@ -94,7 +107,9 @@ TO DO:
     | xtable(samples[,1:2], caption="Groups and their samples.", label="groups")
     | xtable(contrasts, caption="Comparisons between groups.", label="comps")
 
-
+- Similar to xtable is:
+    | https://www.rforge.net/doc/packages/knitr/kable.html
+    
 Some references and blogs:
 ##########################
 
