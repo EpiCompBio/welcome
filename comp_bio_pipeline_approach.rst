@@ -119,7 +119,7 @@ Actual tools and practice
 
 - CGAT scripts and pipelines use popular, open source, mostly free, proven tools with excellent community support such as Python, R, Github, Travis CI, plus the myriad of genomics and biology software options for specific tasks.
 
-- A lot of this work is in beta (as are most pipeline approaches, of which there are many, galaxy is a well known one and could be an answer but version control, scalability and other issues exist). For galaxy see for example:
+- A lot of this work is in beta (as are most pipeline approaches, of which there are many, galaxy is a well known one and could be an answer but version control, scalability and other issues exist, it is designed to ease use for biologists and works well like this). For galaxy see for example:
 	https://en.wikipedia.org/wiki/Galaxy_(computational_biology)
 	https://www.biostars.org/p/50034/
 
@@ -146,6 +146,14 @@ Actual tools and practice
 	+ There's a steep learning curve in general and to each pipeline/approach
 	+ The "system" (eg funders and current science practice) rewards results not repeatability, so no time and little interest
 
+- An excellent complement/alternative is Jupyter and its notebook (aka IPython), particularly for interactive work:
+	+ http://jupyter.org/
+	+ http://nbviewer.jupyter.org/
+	+ The notebook needs windowing, not great when working remotely. It can be set up though and JupyterHub server can (?) solve using notebooks to interact with a cluster (e.g. submitting notebooks as jobs).
+	+ Notebooks can be run locally but submitting jobs remotely:
+	| https://zonca.github.io/2015/04/jupyterhub-hpc.html
+	| http://ipyrad.readthedocs.io/HPC_Tunnel.html
+	
 - On a side note, for managing packages see conda, a great way to reduce time spent on this:
 	http://conda.pydata.org/docs/index.html
 
