@@ -30,7 +30,8 @@ Basic steps with Travis for Python:
   - Create a run_travis_tests.sh file at the root directory which will indicate which tests to actually run in Travis
   - Go to the Travis builds webpage, see the job log, config info, etc.
   - You can go to Travis settings and add the "build passing" logo to the README file in the repo:
-    + https://matthewmoisen.com/blog/how-to-set-up-travis-ci-with-github-for-a-python-project/
+  
+  	https://matthewmoisen.com/blog/how-to-set-up-travis-ci-with-github-for-a-python-project/
     
   - Add unit tests if possible, e.g.:
     
@@ -39,6 +40,7 @@ Basic steps with Travis for Python:
   - See about flake8, pep8, autocorrecting style, etc.:
 
     http://flake8.pycqa.org/en/latest/index.html#quickstart
+	
     https://www.caktusgroup.com/blog/2015/08/15/making-clean-code-part-your-build-process/
 
 For a general example of a simple Travis setup see:
