@@ -36,6 +36,9 @@ Basic steps with Travis for Python:
     
     https://github.com/CGATOxford/cgat/blob/master/tests/bam2bam.py/tests.yaml
     
+  - See about flake8, pep8, autocorrecting style, etc.:
+  
+    https://www.caktusgroup.com/blog/2015/08/15/making-clean-code-part-your-build-process/
 
 For a general example of a simple Travis setup see:
 
