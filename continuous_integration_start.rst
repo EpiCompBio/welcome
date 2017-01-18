@@ -8,8 +8,8 @@ Notes on continuous integration
 .. date:: 18 January 2017
 
 
-Did the code I just pushed change all my results?
-##################################################
+Did the code I just pushed change all my results? Did I introduce a bug?
+########################################################################
 
 Basic steps with Travis for Python:
   - Integrate and set GitHub and Travis to on (commits will trigger the tests)
