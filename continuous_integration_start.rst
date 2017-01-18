@@ -12,9 +12,10 @@ Did the code I just pushed change all my results?
 ##################################################
 
 Basic steps with Travis:
-- Create a .travis.yml file at the root directory
-- Create tests to run, e.g.:
-https://github.com/EpiCompBio/genotype_tools/blob/master/tests/test_style.py
+  - Create a .travis.yml file at the root directory
+  - Create tests to run, e.g.:
+  
+    https://github.com/EpiCompBio/genotype_tools/blob/master/tests/test_style.py
 
 
 
