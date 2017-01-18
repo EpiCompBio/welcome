@@ -46,6 +46,14 @@ For a general example of a simple Travis setup see:
 https://github.com/EpiCompBio/genotype_tools
 
 
+.. todo::
+
+Pages to check and further info:
+
+https://www.hackzine.org/even-better-testing-with-pytest-tox-travis.html
+
+
+
 General references
 ##################
 
