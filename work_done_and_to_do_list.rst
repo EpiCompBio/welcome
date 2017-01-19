@@ -28,6 +28,10 @@ TO DO:
 ::
 
 - Add (hand) visualising diagram as first step
+- For logging within a single package (based on CGAT Experiment.py check 
+
+	https://github.com/CGATOxford/UMI-tools/blob/master/umi_tools/Utilities.py
+	
 - Integrate github with zenodo in order to deposit data, code, manuscript, etc. with DOI generation and release freeze for software citation?
 	+ https://zenodo.org/
 	+ https://guides.github.com/activities/citable-code/
