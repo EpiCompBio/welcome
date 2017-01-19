@@ -40,3 +40,10 @@ TO DO:
 - JISCMAIL, add everyone to email list
 - Code review flow/guide?
 - Check /ifs/projects/proj032/src/pipeline_miRNA.py for more examples
+- Also see Tom and Ian's UMI-tools: https://github.com/CGATOxford/UMI-tools 
+
+	and paper: http://genome.cshlp.org/content/early/2017/01/18/gr.209601.116.abstract
+	
+	and Zenodo DOI: https://zenodo.org/record/215974
+	
+	Nice!
