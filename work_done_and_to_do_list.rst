@@ -17,7 +17,6 @@ TO DO:
 .. todo::
 ::
 
-- For Antonio: merge CGAT Py3 and test PBSPro again.
 - Antonio, David, Vangelis, Gao: Finish building the Genotype QC tool
 - Genotype QC is currently the first pipeline we'll build with these tools/approaches. Although not straightforward it'll essentially simply follow CGAT and Ruffus' workflow and tools. 
 - Discuss with Ibrahim, Rui, Deborah: Matlab isn't open source, big problem: 
@@ -37,6 +36,7 @@ TO DO:
 ::
 
 - Integrate unit tests
-- Integrate reST with e.g. Mendeley for reporting and citation manager
-- JISCMAIL
+- Integrate reST with e.g. Mendeley for reporting and citation manager, check bibtex
+- JISCMAIL, add everyone to email list
 - Code review flow/guide?
+- Check /ifs/projects/proj032/src/pipeline_miRNA.py for more examples
