@@ -66,8 +66,7 @@ To include images:
 ##################
 
 Images can be pulled in with e.g.:
-
-    .. image:: /path/to/image.jpg
+   ```.. image:: /path/to/image.jpg```
 
 
 Problems with reST
