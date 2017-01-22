@@ -6,16 +6,15 @@ TO DO!
 :Date: 22 Dec 2016
 
 
-DONE:
-#####
+DONE
+####
 - The HPC team has installed ruffus and drmaa, these are working fine. David and I have been testing these and everything seems in order. 
 - I've installed (in my user space) the CGAT scripts and pipeline framework, others may need to do this as well later on. The CGAT tools work well for me, they required some manual installation of several of the python libraries though. I also made some changes so that they could communicate with PBS Pro, these work without problems. There has been a recent switch to python 3 though so I have to test the modifications in the CGAT scripts. Not expecting problems though (famous last words)...
 
-TO DO:
-######
+TO DO
+#####
 
 .. todo::
-::
 
 - Antonio, David, Vangelis, Gao: Finish building the Genotype QC tool
 - Genotype QC is currently the first pipeline we'll build with these tools/approaches. Although not straightforward it'll essentially simply follow CGAT and Ruffus' workflow and tools. 
@@ -25,7 +24,6 @@ TO DO:
 	+ Matlab can still be open source (i.e. we can publish code but people without Matlab licence can't re-run/use/modify it?)
 
 .. todo::
-::
 
 - Add (hand) visualising diagram as first step
 - For logging within a single package (based on CGAT Experiment.py check 
@@ -37,7 +35,6 @@ TO DO:
 	+ https://guides.github.com/activities/citable-code/
 
 .. todo::
-::
 
 - Integrate unit tests
 - Integrate reST with e.g. Mendeley for reporting and citation manager, check bibtex
