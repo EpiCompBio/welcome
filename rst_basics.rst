@@ -99,3 +99,12 @@ See csv-table_ directive for example.
 
 .. _csv-table: http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html#the-csv-table-directive
 
+
+References, e.g. [CIT2002]_ are defined at the bottom of the page as::
+
+  .. [CIT2002] A citation
+
+and called with::
+
+  [CIT2002]_
+
