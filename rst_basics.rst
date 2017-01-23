@@ -100,9 +100,41 @@ See csv-table_ directive for example.
 .. _csv-table: http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html#the-csv-table-directive
 
 
-For usefule extensions to rst and sphinx see this tutorial on extensions_:
+For useful extensions to rst and sphinx see this tutorial on extensions_:
 
 .. _extensions: http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html#useful-extensions
+
+In a sphinx conf.py file you can specify the extensions needed, e.g.::
+
+  extensions = [-
+    'easydev.copybutton',
+    'sphinx.ext.autodoc',
+    'sphinx.ext.autosummary',
+    'sphinx.ext.coverage',
+    'sphinx.ext.graphviz',
+    'sphinx.ext.doctest',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.todo',
+    'sphinx.ext.coverage',
+    'sphinx.ext.pngmath',
+    'sphinx.ext.ifconfig',
+    'matplotlib.sphinxext.only_directives',
+    'matplotlib.sphinxext.plot_directive',
+ ]
+
+
+The math directive, e.g.::
+
+  .. math::
+
+      n_{\mathrm{offset}} = \sum_{k=0}^{N-1} s_k n_k
+
+would produce:
+
+.. math::
+
+    n_{\mathrm{offset}} = \sum_{k=0}^{N-1} s_k n_k
+
 
 References, e.g. [CIT2002]_ are defined at the bottom of the page as::
 
