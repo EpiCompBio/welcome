@@ -8,6 +8,8 @@ restructuredText tutorials/info:
 
   - http://www.sphinx-doc.org/en/1.5.1/rest.html
 
+  - Play around with the online editor which converts rst to html: http://rst.ninjs.org/
+
 -----
 
 Generate the documentation with sphinx::
