@@ -8,6 +8,8 @@ restructuredText tutorials/info:
 
   - http://www.sphinx-doc.org/en/1.5.1/rest.html
 
+-----
+
 Generate the documentation with sphinx::
 
    pip install sphinx
@@ -26,6 +28,8 @@ After adding content, you can generate html, pdf, etc. with::
 
 The rendered file will be found in the ``_build`` directory.
 
+-----
+
 Include other rst files::
 
   .. toctree::
@@ -43,6 +47,7 @@ See the toctree_ directive for full info.
 
 .. _toctree: http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html#include-other-rst-files-with-the-toctree-directive
 
+-----
 
 It is also possible to include the literal contents of a file with::
 
@@ -86,6 +91,8 @@ Or import a figure which can have a caption and whatever else you add::
 
         import image
 
+-----
+
 Include a simple csv table::
 
   .. csv-table:: a title
@@ -99,6 +106,8 @@ See csv-table_ directive for example.
 
 .. _csv-table: http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html#the-csv-table-directive
 
+
+-----
 
 For useful extensions to rst and sphinx see this tutorial on extensions_:
 
@@ -122,6 +131,7 @@ In a sphinx conf.py file you can specify the extensions needed, e.g.::
     'matplotlib.sphinxext.plot_directive',
  ]
 
+-----
 
 The math directive, e.g.::
 
@@ -129,12 +139,17 @@ The math directive, e.g.::
 
       n_{\mathrm{offset}} = \sum_{k=0}^{N-1} s_k n_k
 
+-----
+
+TODO, it needs the conf.py file::
+
 would produce:
 
 .. math::
 
     n_{\mathrm{offset}} = \sum_{k=0}^{N-1} s_k n_k
 
+-----
 
 References, e.g. [CIT2002]_ are defined at the bottom of the page as::
 
@@ -144,3 +159,4 @@ and called with::
 
   [CIT2002]_
 
+-----
