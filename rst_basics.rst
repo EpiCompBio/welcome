@@ -100,6 +100,10 @@ See csv-table_ directive for example.
 .. _csv-table: http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html#the-csv-table-directive
 
 
+For usefule extensions to rst and sphinx see this tutorial on extensions_:
+
+.. _extensions: http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html#useful-extensions
+
 References, e.g. [CIT2002]_ are defined at the bottom of the page as::
 
   .. [CIT2002] A citation
