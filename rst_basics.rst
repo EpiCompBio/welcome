@@ -1,5 +1,9 @@
 restructuredText tutorials/info:
 
+  - This stackoverflow_ webpage lists all the tools available and the converters (e.g. rst to pdf, html, odt, etc.).
+  
+  .. _stackoverflow: http://stackoverflow.com/questions/2746692/restructuredtext-tool-support
+  
   - http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html
 
   - http://docutils.sourceforge.net/docs/user/rst/quickstart.html
