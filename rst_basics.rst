@@ -12,6 +12,12 @@ restructuredText tutorials/info:
 
 -----
 
+rst can be used on its own and then converted to html, pdf etc with different tools.
+
+Sphinx_ adds many useful tools and is based on rst, one of the main ones is to connect many files to a single hierarchy of documents. Sphinx also makes it easy to document your python based project.
+
+.. _Sphinx: http://www.sphinx-doc.org/en/stable/tutorial.html
+
 Generate the documentation with sphinx::
 
    pip install sphinx
