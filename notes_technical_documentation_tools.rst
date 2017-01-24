@@ -106,6 +106,18 @@ Miscellaneous
 The downside is that these formats then don't easily (?) allow to run the code as a script from the command line:
     + http://stackoverflow.com/questions/21512918/how-to-use-knitr-from-command-line-with-rscript-and-command-line-argument
 
+Jupyter notebooks
+#################
+
+For exploratory analysis these_ might be a great solution. They are very flexible, can mix languages, keep plots, code, text together. See an example of a publication of RNA-seq here_ and a blog_ with some tips and info. A notebook server_ is needed to run properly.
+
+.. _these: https://jupyter.readthedocs.io/en/latest/index.html
+
+.. _here: http://nbviewer.jupyter.org/github/maayanlab/Zika-RNAseq-Pipeline/blob/master/Zika.ipynb
+
+.. _blog: http://blog.juliusschulz.de/blog/ultimate-ipython-notebook
+
+.. _server: http://jupyter-notebook.readthedocs.io/en/latest/public_server.html
 
 TO DO:
 ######
