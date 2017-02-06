@@ -36,7 +36,7 @@ TO DO
 
 .. todo::
 
-- Integrate unit tests, see Jenkins, eg https://github.com/CGATOxford/CGATPipelines/pull/280#issuecomment-277614681
+- Integrate unit tests (Travis setup, needs workflow for how to create tests e.g. script options, script output, etc.)
 - Integrate reST with e.g. Mendeley for reporting and citation manager, check bibtex
 - Code review flow/guide?
 - Check /ifs/projects/proj032/src/pipeline_miRNA.py for more examples
