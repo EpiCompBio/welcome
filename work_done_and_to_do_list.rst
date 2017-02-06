@@ -36,9 +36,8 @@ TO DO
 
 .. todo::
 
-- Integrate unit tests
+- Integrate unit tests, see Jenkins, eg https://github.com/CGATOxford/CGATPipelines/pull/280#issuecomment-277614681
 - Integrate reST with e.g. Mendeley for reporting and citation manager, check bibtex
-- JISCMAIL, add everyone to email list
 - Code review flow/guide?
 - Check /ifs/projects/proj032/src/pipeline_miRNA.py for more examples
 - Also see Tom and Ian's UMI-tools: https://github.com/CGATOxford/UMI-tools 
