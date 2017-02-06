@@ -55,8 +55,11 @@ Pages to check and further info:
 https://www.hackzine.org/even-better-testing-with-pytest-tox-travis.html
 
 If too heavy for Travis CI see Jenkins_, CGAT Jenkins setup_ and some internal instructions_ for it:
+
 .. _Jenkins: https://jenkins.io/
+
 .. _setup: https://github.com/CGATOxford/CGATTests
+
 .. _instructions: https://github.com/CGATOxford/CGATPipelines/pull/280#issuecomment-277614681
 
 
