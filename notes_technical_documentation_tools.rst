@@ -69,6 +69,14 @@ Images can be pulled in with e.g.:
    ```.. image:: /path/to/image.jpg```
 
 
+Making slide with rst
+#####################
+
+- A few references for writing slides with rst which can then be converted to PDF:
+    http://rst2html5slides.readthedocs.io/en/latest/
+    
+
+
 Problems with reST
 ##################
 
@@ -92,8 +100,11 @@ Miscellaneous
     http://pandoc.org/
     http://ralsina.me/stories/BBS52.html
     
-    | and back (untested, probably not great if it has complex reviewer changes for example):
+    | and back (untested, probably not great if it has complex reviewer changes, logos, styles, etc.):
     https://peintinger.com/?p=365
+    https://ronn-bundgaard.dk/blog/convert-docx-to-markdown-with-pandoc/
+    https://www.tummy.com/blogs/2011/11/28/word-doc-authoring-with-pandoc/
+    http://stackoverflow.com/questions/14249811/markdown-to-docx-including-complex-template
 
 - R Markdown:
     + http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html
@@ -113,7 +124,10 @@ The downside is that these formats then don't easily (?) allow to run the code a
 Jupyter notebooks
 #################
 
-For exploratory analysis these_ might be a great solution. They are very flexible, can mix languages, keep plots, code, text together. See an example of a publication of RNA-seq here_ and a blog_ with some tips and info. A notebook server_ is needed to run properly.
+For exploratory analysis these_ might be a great solution. They are very flexible, can mix languages, keep plots, code, text together. See an example of a publication of RNA-seq here_ and a blog_ with some tips and info. A notebook server_ is needed to run properly. 
+
+R markdown_ v2 is another excellent option in this regard. See also R Markdown to Word_. If you're running analysis locally (on a laptop) R notebooks and Jupyter and probably far better than rst and Sphinx for reports.
+
 
 .. _these: https://jupyter.readthedocs.io/en/latest/index.html
 
@@ -122,6 +136,11 @@ For exploratory analysis these_ might be a great solution. They are very flexibl
 .. _blog: http://blog.juliusschulz.de/blog/ultimate-ipython-notebook
 
 .. _server: http://jupyter-notebook.readthedocs.io/en/latest/public_server.html
+
+.. _markdown: http://rmarkdown.rstudio.com/index.html
+
+.. _Word: http://rmarkdown.rstudio.com/articles_docx.html
+
 
 TO DO
 #####
