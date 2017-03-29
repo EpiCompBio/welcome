@@ -88,9 +88,12 @@ http://docutils.sourceforge.net/docs/user/rst/demo.txt
 Miscellaneous
 #############
 
-- Pandoc is a universal document converter, it can do rST to ODT (for Word for example) and back:
+- Pandoc is a universal document converter, it can do rST to ODT (for Word for example):
     http://pandoc.org/
     http://ralsina.me/stories/BBS52.html
+    
+    | and back (untested, probably not great if it has complex reviewer changes for example):
+    https://peintinger.com/?p=365
 
 - R Markdown:
     + http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html
