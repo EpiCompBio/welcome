@@ -126,9 +126,6 @@ Jupyter notebooks
 
 For exploratory analysis these_ might be a great solution. They are very flexible, can mix languages, keep plots, code, text together. See an example of a publication of RNA-seq here_ and a blog_ with some tips and info. A notebook server_ is needed to run properly. 
 
-R markdown_ v2 is another excellent option in this regard. See also R Markdown to Word_. If you're running analysis locally (on a laptop) R notebooks and Jupyter and probably far better than rst and Sphinx for reports.
-
-
 .. _these: https://jupyter.readthedocs.io/en/latest/index.html
 
 .. _here: http://nbviewer.jupyter.org/github/maayanlab/Zika-RNAseq-Pipeline/blob/master/Zika.ipynb
@@ -137,10 +134,35 @@ R markdown_ v2 is another excellent option in this regard. See also R Markdown t
 
 .. _server: http://jupyter-notebook.readthedocs.io/en/latest/public_server.html
 
+
+R markdown and its notebook
+###########################
+
+R markdown_ v2 is another excellent option in this regard. See also R Markdown to Word_. If you're running analysis locally, R notebooks and Jupyter are probably far better than rst and Sphinx for reports. See these blogs (a_, b_, c_, d_, e_) comparing R and Jupyter notebooks for instance and other tutorials. 
+
+You can also run Rmd files with command line parameters like (f_, g_, h_). This is the main tutorial_.
+
+.. _a: https://www.r-bloggers.com/jupyter-and-r-markdown-notebooks-with-r/
+
+.. _b: https://www.datacamp.com/community/blog/jupyter-notebook-r#gs.b5ENsjE
+
+.. _c: https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook#gs.6r5cYnQ
+
+.. _d: http://danielphadley.com/Jupyter-to-Rmarkdown/
+
+.. _e: https://blog.rstudio.org/2016/10/05/r-notebooks/
+
 .. _markdown: http://rmarkdown.rstudio.com/index.html
 
 .. _Word: http://rmarkdown.rstudio.com/articles_docx.html
 
+.. _f: http://stackoverflow.com/questions/31463143/pass-parameters-from-command-line-into-r-markdown-document
+
+.. _g: http://stackoverflow.com/questions/32479130/passing-parameters-to-r-markdown?rq=1
+
+.. _h: http://stackoverflow.com/questions/31822873/proper-r-markdown-code-organization?rq=1
+
+.. _tutorial: http://rmarkdown.rstudio.com/lesson-1.html
 
 TO DO
 #####
