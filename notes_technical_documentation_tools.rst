@@ -142,6 +142,8 @@ R markdown_ v2 is another excellent option in this regard. See also R Markdown t
 
 You can also run Rmd files with command line parameters like (f_, g_, h_). This is the main tutorial_.
 
+Check the reference_ guide and article templates_ for Rmarkdown.
+
 .. _a: https://www.r-bloggers.com/jupyter-and-r-markdown-notebooks-with-r/
 
 .. _b: https://www.datacamp.com/community/blog/jupyter-notebook-r#gs.b5ENsjE
@@ -163,6 +165,17 @@ You can also run Rmd files with command line parameters like (f_, g_, h_). This 
 .. _h: http://stackoverflow.com/questions/31822873/proper-r-markdown-code-organization?rq=1
 
 .. _tutorial: http://rmarkdown.rstudio.com/lesson-1.html
+
+.. _reference: https://github.com/rstudio/rticles
+
+.. _templates: https://github.com/rstudio/rticles
+
+VIM or Emacs?
+#############
+
+See org mode in vim_ for example (originally emacs).
+
+.. _vim: http://www.vim.org/scripts/script.php?script_id=3642
 
 TO DO
 #####
