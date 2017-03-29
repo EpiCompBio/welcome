@@ -173,9 +173,11 @@ Check the reference_ guide and article templates_ for Rmarkdown.
 VIM or Emacs?
 #############
 
-See org mode in vim_ for example (originally emacs).
+See org mode in vim_ for example (originally emacs_).
 
 .. _vim: http://www.vim.org/scripts/script.php?script_id=3642
+
+.. _emacs: http://orgmode.org/
 
 TO DO
 #####
