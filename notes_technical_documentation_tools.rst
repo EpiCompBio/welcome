@@ -173,7 +173,7 @@ Check the reference_ guide and article templates_ for Rmarkdown.
 VIM or Emacs?
 #############
 
-See org mode in vim_ for example (originally emacs_).
+See org mode in vim_ for example (originally emacs_). Although it seems like working with code in vim isn't possible, for vim users, maybe emacs + evil + org-mode is better.
 
 .. _vim: http://www.vim.org/scripts/script.php?script_id=3642
 
