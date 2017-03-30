@@ -170,6 +170,7 @@ Check the reference_ guide and article templates_ for Rmarkdown.
 
 .. _templates: https://github.com/rstudio/rticles
 
+
 VIM or Emacs?
 #############
 
@@ -184,23 +185,171 @@ See org mode in vim_ for example (originally emacs_). Although it seems like wor
 .. _better: https://blog.aaronbieber.com/2015/05/24/from-vim-to-emacs-in-fourteen-days.html
 
 
+Creating figure layouts programmatically
+########################################
+
+With python and rst
++++++++++++++++++++
+
+- rst doesn't have a specific layout tool (?), some workarounds:
+
+http://stackoverflow.com/questions/10219634/image-grid-in-restructuredtext-sphinx/10229407#10229407
+
+- Image rst directive details:
+
+http://docutils.sourceforge.net/docs/ref/rst/directives.html#images
+
+e.g. 
+
+.. code:: python
+
+	.. image:: _images/report_title.png
+	   :width: 30%
+	.. image:: _images/report_slide1.png
+	   :width: 30%
+	.. image:: _images/report_slide2.png
+	   :width: 30%
+
+
+- Wrap figures in a table within rst:
+
+http://stackoverflow.com/questions/12148428/rest-image-grid-with-captions?noredirect=1&lq=1
+
+---------
+
+Python package, probably the one to use, starts from SVG:
+https://github.com/btel/svg_utils
+
+e.g. http://svgutils.readthedocs.io/en/latest/tutorials/composing_multipanel_figures.html
+
+.. code:: python
+
+#!/usr/bin/env python
+#coding=utf-8
+
+from svgutils.compose import *
+
+Figure("16cm", "6.5cm", 
+        Panel(
+              SVG("sigmoid_fit.svg"),
+              Text("A", 25, 20, size=12, weight='bold')
+             ),
+        Panel(
+              SVG("anscombe.svg").scale(0.5),
+              Text("B", 25, 20, size=12, weight='bold')
+             ).move(280, 0)
+        ).save("fig_final_compose.svg")
+
+
+-----------------
+
+With R
+++++++
+
+- grImport does something similar and can manipulate figures/images starting from PostScript:
+
+https://cran.r-project.org/web/packages/grImport/vignettes/import.pdf
+
+- Use imager package which can import vector graphics, but is meant for image manipulation not creating layouts:
+
+http://dahtah.github.io/imager/gimptools.html
+
+http://dahtah.github.io/imager/
+
+
+Convert SVG to other formats
+++++++++++++++++++++++++++++
+
+CairoSVG
+http://cairosvg.org/
+e.g.
+cairosvg -o fig_final.pdf fig_final.svg
+Works well, python library, only converts
+
+Inkscape
+https://inkscape.org/en/download/mac-os/
+e.g.
+inkscape --file=fig_final.svg --export-area-drawing --without-gui --export-pdf=output.pdf
+
+inkscape from the cmd in OS X gave error and looks like an old known bug
+Full suite though, equivalent to Adobe Illustrator
+Use:
+brew install caskformula/caskformula/inkscape
+
+to install version 0.92.1, this works well.
+
+Python image manipulators
++++++++++++++++++++++++++
+
+OpenCV
+
+PIL Pillow Fork
+
+Both are for statistical image processing
+
+References to check
++++++++++++++++++++
+
+http://cellbio.emory.edu/bnanes/figures/#414
+How to Create Publication-Quality Figures
+https://inkscape.org/en/about/overview/
+Overview | Inkscape
+http://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1003833&type=printable
+pcbi.1003833 1..7 - file
+http://unix.stackexchange.com/questions/42856/how-can-i-convert-a-png-to-a-pdf-in-high-quality-so-its-not-blurry-or-fuzzy
+imagemagick - How can I convert a PNG to a PDF in high quality so it's not blurry or fuzzy? - Unix & Linux Stack Exchange
+http://dahtah.github.io/imager/gimptools.html
+Imager as image editor
+http://www.sthda.com/english/wiki/create-and-format-powerpoint-documents-from-r-software#add-plots-and-images
+Create and format PowerPoint documents from R software - Easy Guides - Wiki - STHDA
+http://davidgohel.github.io/ReporteRs/index.html
+Microsoft Word and PowerPoint Documents Generation • ReporteRs package
+https://github.com/btel/svg_utils
+btel/svg_utils: Python tools to create and manipulate SVG files
+https://cran.r-project.org/web/packages/cowplot/index.html
+CRAN - Package cowplot
+https://cran.r-project.org/web/packages/cowplot/vignettes/plot_grid.html
+Arranging plots in a grid
+http://docutils.sourceforge.net/docs/ref/rst/directives.html#images
+reStructuredText Directives
+https://cran.r-project.org/web/packages/grImport/vignettes/import.pdf
+CMBX12 - import.pdf
+http://stackoverflow.com/questions/30227466/combine-several-images-horizontally-with-python
+Combine several images horizontally with Python - Stack Overflow
+http://stackoverflow.com/questions/4567409/python-image-library-how-to-combine-4-images-into-a-2-x-2-grid
+Python Image Library: How to combine 4 images into a 2 x 2 grid? - Stack Overflow
+https://pillow.readthedocs.io/en/4.0.x/
+Pillow — Pillow (PIL Fork) 4.0.0 documentation
+https://opencv-python-tutroals.readthedocs.io/en/latest/#
+Welcome to OpenCV-Python Tutorials’s documentation! — OpenCV-Python Tutorials 1 documentation
+http://cairosvg.org/
+CairoSVG
+https://github.com/astraw/svg_stack
+astraw/svg_stack: concatenate SVG files
+https://www.r-bloggers.com/a-quick-exploration-of-the-reporters-package/
+A quick exploration of the ReporteRs package | R-bloggers
+
+
 TO DO
 #####
 
 .. note:: 
 
-- Current thoughts:
+- Thoughts:
     + Keep code, data and reports separate. 
     + Use rST for automatic reports run after pipeline analysis which could output plots, database, results table, methods, legends, etc.
+    + Generate all plots in SVG for easier conversion, processing, etc. downstream.
     + Include generic narrative and pull in plots, tables, legends and methods text from external files (generated by the plot script or as text output from a given analysis).
     + Create meta rST to pull in automated reports and add ad hoc interpretation.
+    + Use Python's svg_utils to create (simple) figure layouts (multi-plot figures for publication), convert with command line inkscape or Python library CairoSVG to other formats.
 
 
-- How to include code (or reference to location) in the report?
+- How to include code (or reference to location) in the report? See notebooks (R or Jupyter for this)
 - How to include parameters run, date, author, location, etc.?
 
 - Check how to import tables, with CGATReport for example:
     + https://github.com/AndreasHeger/CGATReport/blob/master/doc/GalleryTables.rst
+    + R notebooks have options that look good for this.
 
 - And examples of reports:
     + https://www.cgat.org/downloads/qbh6mmrDkX/analysis_fdr0.01_report/pipeline/Methods.html#irf5-motifs
@@ -219,11 +368,10 @@ TO DO
     + /ifs/projects/proj008/web/pipeline_proj008_meta_report/_static and /_sources
     + https://www.cgat.org/downloads/qbh6mmrDkX/analysis_fdr0.01_report/contents.html
     
-- Check Jupyter ecosystem as this solves many of the issues above.
+- Check Jupyter ecosystem and Rstudio with R notebook as these are multi-language and can solve several of these issues.
 
-
-Some references and blogs
-#########################
+Additional references and blogs
+###############################
 
 | https://github.com/kiith-sa/RestructuredText-tutorial
 
