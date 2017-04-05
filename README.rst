@@ -1,3 +1,7 @@
+.. image:: https://readthedocs.org/projects/welcome/badge/?version=latest
+   :target: http://welcome.readthedocs.io/en/latest/?badge=latest
+   :alt: Documentation Status
+
 #######
 Welcome
 #######
