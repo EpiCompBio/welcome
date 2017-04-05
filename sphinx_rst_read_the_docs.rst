@@ -21,6 +21,7 @@ How to generate python package documentation with Sphinx
 
 Links with more information:
 http://docs.readthedocs.io/en/latest/builds.html
+https://daler.github.io/sphinxdoc-test/includeme.html
 
 
 

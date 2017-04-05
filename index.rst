@@ -3,3 +3,4 @@
 	:caption: Table of Contents
 	:glob:
 		*.rst
+        *.yml
