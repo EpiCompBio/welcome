@@ -6,22 +6,36 @@ How to generate python package documentation with Sphinx
 - Install Sphinx, sphinx-quickstart, sphinx-apidoc, sphinx-build
 
 - In the python package docs directory that you would've created:
-	+ Run 'sphinx-quickstart' to setup configuration values and generate template rst docs
+	+ Run 'sphinx-quickstart' to setup configuration values and generate template rst docs. See an example_ and `First Steps with Sphinx`_.
 	+ Manually edit index.rst and other files to use as content
+	+ sphinx-build -b html sourcedir builddir ;  or pdf (needs the LaTex builder installed)
 	+ sphinx-apidoc -o . .. to generate module and function documents from docstrings within scripts
-	+ make html to generate the first build
-	+ sphinx-autobuild . _build_html
+	+ make clean, make html/latexpdf to clean and generate further builds (make is equivalent to sphinx-build because quickstart creates a Makefile and make.bat files)
+	+ sphinx-autobuild . _build_html updates (use if large docs that are faster to update than build from scratch)
 	+ Pull/push etc to GitHub account
-	+ Create an account in ReadTheDocs and connect to GitHub repository
-	+ Some configuration is needed (TO DO)
+	+ Create an account in ReadTheDocs (RTD) and connect to GitHub repository
+	+ Some configuration is needed (TO DO) at RTDs
 	+ RTD rebuilds after every commit using 'sphinx-build -b html . _build/html'
 	+ If the build on RTD doesn't work try 'Wipe' in /projects/[project]/versions/
+	+ You can add the '_build' dir to .gitignore
 
 
+.. _example: https://pythonhosted.org/an_example_pypi_project/sphinx.html
 
-Links with more information:
+.. _`First Steps with Sphinx`: http://www.sphinx-doc.org/en/stable/tutorial.html
+
+
+Links with more information (some are old):
+
 http://docs.readthedocs.io/en/latest/builds.html
+
 https://daler.github.io/sphinxdoc-test/includeme.html
+
+http://lucasbardella.com/blog/2010/02/hosting-your-sphinx-docs-in-github
+
+http://cgat.readthedocs.io/en/latest/PipelineReports.html
+
+
 
 
 
