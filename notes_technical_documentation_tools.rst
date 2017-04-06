@@ -80,7 +80,7 @@ Making slides with rst
 	hovercraft hovercraft.rst
 	hovercraft tutorial.rst
 
-Go to your default browser and open the localport (e.g. http://0.0.0.0:8000) to see the presentation.
+Go to your default browser and open the localport (e.g. http://0.0.0.0:8000) to see the presentation, or create a dir and use -o to save the output.
 
 More on Hovercraft with `additional tools`_. 
 
