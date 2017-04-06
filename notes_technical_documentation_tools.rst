@@ -69,13 +69,26 @@ Images can be pulled in with e.g.:
    ```.. image:: /path/to/image.jpg```
 
 
-Making slide with rst
-#####################
+Making slides with rst
+######################
 
+- Cycle:
+	+ Create rst document
+	+ Convert from rst to e.g. beamer (latex slides) with pandoc:
+
+.. bash::
+	pandoc myfile.rst -s -f rst --to beamer -o myfile.pdf
+	
+
+	
 - A few references for writing slides with rst which can then be converted to PDF:
+    http://pandoc.org/getting-started.html
     http://rst2html5slides.readthedocs.io/en/latest/
+    http://web.mit.edu/rsi/www/pdfs/beamer-tutorial.pdf
+    http://rst2html5slides.readthedocs.io/en/latest/examples.html
+    http://pandoc.org/demos.html
+    http://mirror.unl.edu/ctan/macros/latex/contrib/beamer/doc/beameruserguide.pdf
     
-
 
 Problems with reST
 ##################
