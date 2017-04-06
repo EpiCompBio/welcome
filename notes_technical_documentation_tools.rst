@@ -102,15 +102,18 @@ See `this page`_ for more options and explanations.
 
 .. _`this page`: http://www.allgoodbits.org/articles/view/37
 
-Another `this tutorial`_ and `github code`_ with rst and Beamer.
+Other options:
+- See `this tutorial`_ and `github code`_ with rst and Beamer.
 
 .. _`this tutorial`: https://andrewgoldstone.com/blog/2014/12/24/slides/
 
 .. _`github code`: https://github.com/agoldst/elsmd
 
-	+ See example of rst2pdf_.
+	+ See example_ of rst2pdf_.
 	
-.. _rst2pdf: https://blog.notmyidea.org/use-restructured-text-rest-to-power-your-presentations.html
+.. _rst2pdf: https://github.com/rst2pdf/rst2pdf
+
+.. _example: https://blog.notmyidea.org/use-restructured-text-rest-to-power-your-presentations.html
 
 - A few references for writing slides with rst which can then be converted to PDF:
 	
