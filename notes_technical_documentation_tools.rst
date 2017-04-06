@@ -82,11 +82,18 @@ Making slides with rst
 
 	
 - A few references for writing slides with rst which can then be converted to PDF:
+	+ hieroglyph looks good but has a bug with the Sphinx 1.5 update:
+    https://github.com/nyergler/hieroglyph/issues
+    
+    	+ Pandoc info (general doc converter):
     http://pandoc.org/getting-started.html
-    http://rst2html5slides.readthedocs.io/en/latest/
-    http://web.mit.edu/rsi/www/pdfs/beamer-tutorial.pdf
-    http://rst2html5slides.readthedocs.io/en/latest/examples.html
     http://pandoc.org/demos.html
+    	
+	+ This looks good but errors on import:
+    http://rst2html5slides.readthedocs.io/en/latest/
+    
+    	+ Beamer?
+    http://web.mit.edu/rsi/www/pdfs/beamer-tutorial.pdf
     http://mirror.unl.edu/ctan/macros/latex/contrib/beamer/doc/beameruserguide.pdf
     
 
