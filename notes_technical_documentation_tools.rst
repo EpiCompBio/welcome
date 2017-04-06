@@ -76,15 +76,15 @@ Making slides with rst
 	+ Create rst document
 	+ Convert from rst to e.g. beamer (latex slides) with pandoc:
 
-.. bash::
+.. code-block:: bash
 
 	pandoc myfile.rst -s -f rst --to beamer -o myfile.pdf
 	pandoc -V theme:Warsaw -N -S --toc --normalize -f rst -t beamer -o myfile.pdf myfile.rst
 
-See here_ for more options and explanations.
+See `this page`_ for more options and explanations.
 
-.. _here: http://www.allgoodbits.org/articles/view/37
-	
+.. _`this page`: http://www.allgoodbits.org/articles/view/37
+
 - A few references for writing slides with rst which can then be converted to PDF:
 	
 	+ hieroglyph looks good but has a bug with the Sphinx 1.5 update:
@@ -226,7 +226,7 @@ http://docutils.sourceforge.net/docs/ref/rst/directives.html#images
 
 e.g. 
 
-.. code:: python
+.. code-block::
 
 	.. image:: _images/report_title.png
 	   :width: 30%
@@ -247,7 +247,7 @@ https://github.com/btel/svg_utils
 
 e.g. http://svgutils.readthedocs.io/en/latest/tutorials/composing_multipanel_figures.html
 
-.. code:: python
+.. code-block:: python
 
 #!/usr/bin/env python
 #coding=utf-8
