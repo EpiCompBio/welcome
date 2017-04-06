@@ -72,7 +72,24 @@ Images can be pulled in with e.g.:
 Making slides with rst
 ######################
 
-- Cycle:
+- Hovercraft!_ Looks like it does the trick. 
+
+.. code-block::
+	git clone https://github.com/regebro/hovercraft.git
+	cd hovercraft/docs/examples
+	hovercraft hovercraft.rst
+	hovercraft tutorial.rst
+
+Go to your default browser and open the localport (e.g. http://0.0.0.0:8000) to see the presentation.
+
+More on Hovercraft (a_, 
+
+.. _Hovercraft!: https://github.com/regebro/hovercraft
+
+.. a_: https://github.com/Springerle/hovercraft-slides
+
+
+Other options are:
 	+ Create rst document
 	+ Convert from rst to e.g. beamer (latex slides) with pandoc:
 
@@ -84,6 +101,16 @@ Making slides with rst
 See `this page`_ for more options and explanations.
 
 .. _`this page`: http://www.allgoodbits.org/articles/view/37
+
+Another tutorial_ and code_ with rst and Beamer.
+
+.. _tutorial: https://andrewgoldstone.com/blog/2014/12/24/slides/
+
+.. _code: https://github.com/agoldst/elsmd
+
+	+ See example of rst2pdf_.
+	
+.. _rst2pdf: https://blog.notmyidea.org/use-restructured-text-rest-to-power-your-presentations.html
 
 - A few references for writing slides with rst which can then be converted to PDF:
 	
@@ -97,7 +124,7 @@ See `this page`_ for more options and explanations.
 	+ This looks good but errors on import:
     http://rst2html5slides.readthedocs.io/en/latest/
     
-    	+ Beamer?
+    	+ More on Beamer?
     http://web.mit.edu/rsi/www/pdfs/beamer-tutorial.pdf
     http://mirror.unl.edu/ctan/macros/latex/contrib/beamer/doc/beameruserguide.pdf
     
