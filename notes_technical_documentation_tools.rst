@@ -72,7 +72,7 @@ Images can be pulled in with e.g.:
 Making slides with rst
 ######################
 
-- Hovercraft!_ Looks like it does the trick. 
+- Hovercraft_ Looks like it does the trick. 
 
 .. code-block::
 	git clone https://github.com/regebro/hovercraft.git
@@ -82,11 +82,11 @@ Making slides with rst
 
 Go to your default browser and open the localport (e.g. http://0.0.0.0:8000) to see the presentation.
 
-More on Hovercraft (a_, 
+More on Hovercraft with `additional tools`_. 
 
-.. _Hovercraft!: https://github.com/regebro/hovercraft
+.. _Hovercraft: https://github.com/regebro/hovercraft
 
-.. a_: https://github.com/Springerle/hovercraft-slides
+.. _`additional tools`: https://github.com/Springerle/hovercraft-slides
 
 
 Other options are:
@@ -102,11 +102,11 @@ See `this page`_ for more options and explanations.
 
 .. _`this page`: http://www.allgoodbits.org/articles/view/37
 
-Another tutorial_ and code_ with rst and Beamer.
+Another `this tutorial`_ and `github code`_ with rst and Beamer.
 
-.. _tutorial: https://andrewgoldstone.com/blog/2014/12/24/slides/
+.. _`this tutorial`: https://andrewgoldstone.com/blog/2014/12/24/slides/
 
-.. _code: https://github.com/agoldst/elsmd
+.. _`github code`: https://github.com/agoldst/elsmd
 
 	+ See example of rst2pdf_.
 	
