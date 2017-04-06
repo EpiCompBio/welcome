@@ -77,11 +77,16 @@ Making slides with rst
 	+ Convert from rst to e.g. beamer (latex slides) with pandoc:
 
 .. bash::
-	pandoc myfile.rst -s -f rst --to beamer -o myfile.pdf
-	
 
+	pandoc myfile.rst -s -f rst --to beamer -o myfile.pdf
+	pandoc -V theme:Warsaw -N -S --toc --normalize -f rst -t beamer -o myfile.pdf myfile.rst
+
+See here_ for more options and explanations.
+
+.. _here: http://www.allgoodbits.org/articles/view/37
 	
 - A few references for writing slides with rst which can then be converted to PDF:
+	
 	+ hieroglyph looks good but has a bug with the Sphinx 1.5 update:
     https://github.com/nyergler/hieroglyph/issues
     
