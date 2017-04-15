@@ -1,6 +1,6 @@
-===================
+###################
 Packaging in Python
-===================
+###################
 
 Python packaging has a messy history and isn't completely straightforward.
 
