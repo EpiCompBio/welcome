@@ -1,3 +1,8 @@
+=======================
+Best practice checklist
+=======================
+
+
 Box 1. Our complete list of potential topics to be indicative of good practices in software development.
 ########################################################################################################
 
