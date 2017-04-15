@@ -43,7 +43,7 @@ R script examples and notes
 
 Simple example (shebangs are the first line in a real script):
 
-.. code-block:
+.. code-block::
 
     #!/usr/bin/Rscript
 
@@ -102,6 +102,6 @@ See how to specify the arguments and options (docopt has been ported to many lan
 - https://github.com/docopt/docopt
 
 See examples:
-# http://www.slideshare.net/EdwindeJonge1/docopt-user2014
-# http://rgrannell1.github.io/blog/2014/08/04/command-line-interfaces-in-r/
-# https://realpython.com/blog/python/comparing-python-command-line-parsing-libraries-argparse-docopt-click/
+- http://www.slideshare.net/EdwindeJonge1/docopt-user2014
+- http://rgrannell1.github.io/blog/2014/08/04/command-line-interfaces-in-r/
+- https://realpython.com/blog/python/comparing-python-command-line-parsing-libraries-argparse-docopt-click/
