@@ -36,7 +36,14 @@ http://lucasbardella.com/blog/2010/02/hosting-your-sphinx-docs-in-github
 http://cgat.readthedocs.io/en/latest/PipelineReports.html
 
 
+Annoying quirks?!
+#################
 
+For titles to appear in the ReadTheDocs table of contents they need to be as:
 
-
+    ####
+    Why?
+    ####
+    
+If using '=' instead they don't seem to build...
 
