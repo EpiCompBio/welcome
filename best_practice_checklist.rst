@@ -3,11 +3,17 @@ Best practice checklist
 =======================
 
 
-Box 1. Our complete list of potential topics to be indicative of good practices in software development.
-########################################################################################################
+*Box 1*
 
-Source:
-    https://f1000research.com/articles/5-2000/v1
+*Our complete list of potential topics to be indicative of good practices in software development.*
+
+-----
+
+Source_ reference
+
+.. _Source: https://f1000research.com/articles/5-2000/v1
+
+-----
 
 Each of these topics have quantitative and qualitative metrics that may help track the adoption of good practice and monitor compliance with the guidelines in life sciences.
 
@@ -138,3 +144,5 @@ Each of these topics have quantitative and qualitative metrics that may help tra
         b. Does it use a language-standard repository to pull in dependencies?
 
         c. Is software made available as a dependency in a dependency repository?
+
+-----
