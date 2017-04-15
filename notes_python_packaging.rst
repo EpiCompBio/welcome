@@ -45,7 +45,6 @@ Get the packages you need, e.g.
 
 	pip install -U pip twine check-manifest setuptools
 
-
 Create/edit MANIFEST.in and setup.py files as necessary (and possibly an INI file depending on how you've set things up).
 
 Use `check-manifest`_ to detect errors in setup.py:
@@ -58,12 +57,11 @@ Use `check-manifest`_ to detect errors in setup.py:
 
 Run the following to test and create the discribution:
 
-.. code-block::
-
+.. code-block:: bash
+	
 	python setup.py check
 	
 	python setup.py sdist bdist_wheel
-
 
 You can create an environment and test in a separate directory (using conda for example):
 
