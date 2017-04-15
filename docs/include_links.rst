@@ -6,8 +6,6 @@
 .. include:: ../reproducibility_thoughts.rst
 .. include:: ../comp_bio_pipeline_approach.rst
 
-.. include:: ../matlab_users.rst
-
 .. include:: ../notes_python_packaging.rst
 
 .. include:: ../notes_technical_documentation_tools.rst
