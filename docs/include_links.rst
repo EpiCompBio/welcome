@@ -19,6 +19,5 @@
 .. include:: ../work_done_and_to_do_list.rst
 
 .. include:: ../best_practice_checklist.rst
-.. include:: ../travis_example_R.travis.yml
-.. include:: ../travis_example_python.travis.yml
-
+.. .. include:: ../travis_example_R.travis.yml
+.. .. include:: ../travis_example_python.travis.yml
