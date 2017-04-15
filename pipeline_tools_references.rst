@@ -1,5 +1,6 @@
-References and reviews of computational pipelines:
-##################################################
+#################################################
+References and reviews of computational pipelines
+#################################################
 
 - 'Big data', Hadoop and cloud computing in genomics. - PubMed - NCBI
 https://www.ncbi.nlm.nih.gov/pubmed/23872175
