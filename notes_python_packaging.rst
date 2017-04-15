@@ -1,34 +1,70 @@
+===================
 Packaging in Python
 ===================
 
-Use the structure provided by project_quickstart.py_ as a starting example.
+Python packaging has a messy history and isn't completely straightforward.
+
+See these webpages first and follow their guidelines:
+
+`python - Differences between distribute, distutils, setuptools and distutils2? - Stack Overflow`_
+
+.. _`python - Differences between distribute, distutils, setuptools and distutils2? - Stack Overflow`: http://stackoverflow.com/questions/6344076/differences-between-distribute-distutils-setuptools-and-distutils2?noredirect=1&lq=1
+
+`Python Packaging User Guide — Python Packaging User Guide documentation`_
+
+.. _`Python Packaging User Guide — Python Packaging User Guide documentation`: https://packaging.python.org/
+
+
+`pypa/sampleproject: A sample project that exists for PyPUG's "Tutorial on Packaging and Distributing Projects"`_
+
+.. _`pypa/sampleproject: A sample project that exists for PyPUG's "Tutorial on Packaging and Distributing Projects"`: https://github.com/pypa/sampleproject
+
+-----
+
+You can also see other package examples (e.g. cryptography_)and the Python package sample_.
+
+.. _cryptography: https://github.com/pyca/cryptography
+
+.. _sample: https://github.com/pypa/sampleproject
+
+
+You can also use the structure provided by project_quickstart.py_ as a starting point.
 
 .. _project_quickstart.py: https://github.com/AntonioJBT/project_quickstart
 
-Edit MANIFEST.in, your INI file and setup.py files as necessary
 
-Use check-manifest_ to detect errors in setup.py:
+-----
 
-.. _check-manifest: https://pypi.python.org/pypi/check-manifest
+Workflow
+========
 
-.. Also: https://github.com/mgedmin/check-manifest
+Once you have the project file and directory structure:
+Get the packages you need, e.g.
 
 .. code-block:: bash
-	
-	pip install check-manifest
 
-	cd ~/src/mygreatpackage
+	pip install -U pip twine check-manifest setuptools
+
+
+Create/edit MANIFEST.in, your INI file and setup.py files as necessary.
+
+Use `check-manifest`_ to detect errors in setup.py:
+
+.. _`check-manifest`: https://pypi.python.org/pypi/check-manifest
+
+.. code-block:: bash
 
 	check-manifest
 
-Run:
+Run the following to test and create the discribution:
 
-.. code-block:: python
+.. code-block::
 
 	python setup.py check
 	python setup.py sdist bdist_wheel
 
-Create an environment and test in a separate directory:
+
+You can create an environment and test in a separate directory (using conda for example):
 
 .. code-block:: bash
 
@@ -36,7 +72,9 @@ Create an environment and test in a separate directory:
 
 	conda create -n test_env python=3.6
 
-	Install any dependencies needed with conda or pip
+Install any dependencies needed with conda or pip
+
+.. code-block:: bash
 
 	source activate test_env
 
@@ -50,7 +88,8 @@ Install and test package:
 
 	python setup.py install
 
-Then test the main script elsewhere, run a test example, etc.
+
+Then test the main script elsewhere (you can create an entry point in setup.py), run a test example, etc.
 
 
 If this is an actual package to share with others upload to PyPI:
@@ -80,7 +119,11 @@ The package should now be ready to install anywhere with:
 	pip install package_xxx
 
 
-This blog_ has a good explanation of how to carry out all of this with examples of MANIFEST.in and setup.py files.
+-----
+
+Further references:
+
+This blog_ has an explanation of how to carry out all of this with examples of MANIFEST.in and setup.py files.
 
 .. _blog: https://hynek.me/articles/sharing-your-labor-of-love-pypi-quick-and-dirty/
 
@@ -88,8 +131,8 @@ It also has further information on how to use `PyPI's test server`_.
 
 .. _`PyPI's test server`: https://testpypi.python.org/pypi
 
+Things changed a fair amount from python 2x to 3x so check whatever is the most recent information (see the links above for this).
 
-Further references:
 
 https://the-hitchhikers-guide-to-packaging.readthedocs.io/en/latest/introduction.html
 
@@ -102,12 +145,3 @@ https://blog.niteoweb.com/setuptools-run-custom-code-in-setup-py
 http://stackoverflow.com/questions/774824/explain-python-entry-points
 
 http://stackoverflow.com/questions/13307408/python-packaging-data-files-are-put-properly-in-tar-gz-file-but-are-not-install?rq=1
-
-
-
-
-
-
-
-
-
