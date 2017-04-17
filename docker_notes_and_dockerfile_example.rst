@@ -267,7 +267,7 @@ Stop and remove all containers:
 
 .. code-block:: bash
 
-	docker stop $(docker ps -aq)
+	docker stop $(docker ps -aq) # stop is 'graceful', can also use docker kill $(docker ps -aq)
 	docker rm $(docker ps -aq)
 
 
@@ -300,15 +300,19 @@ Copy Dockerfile to test directory (not necessary though), build image locally an
 	docker images # Check it's there
 	docker run --rm -ti user_xxx/my_docker_tag # Run your image interactively and remove the container when exiting
 
-Clean up:
+Aggressive clean up:
 
 .. code-block:: bash
 
 	docker images -a # Show all images
-	docker images -f "dangling=true" # Show <none> images
-	docker rmi $(docker images -qf "dangling=true") # Delete <none> images
+	docker images -f "dangling=true" # Show <none> images, remains of previous builds
+	docker rmi $(docker images -qf "dangling=true") # Delete <none> images, add '-a' option to delete ALL images
 	docker ps -a # Show all containers
-	docker rm $(docker ps -aq) # Delete them
+	docker stop $(docker ps -aq) # stop is 'graceful', can also use docker kill $(docker ps -aq)
+	docker rm $(docker ps -aq) # Delete all containers
+	
+	# A softer removal of containers:
+	docker rm $(docker ps -f "status=exited" -f "status=created" -q)
 
 You can then go back to your code, make changes, push/pull to your version control system and start again with Dockerfile to test your package in a different environment to your machine.
 
