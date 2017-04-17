@@ -55,7 +55,7 @@ Base image with all the tools needed except the application itself:
 	- Conda
  	- Apline Linux (minimalistic)
 
-Copy the Dockerfile, eg:
+Copy the Dockerfile, e.g.:
 
 - https://hub.docker.com/r/continuumio/miniconda3/~/dockerfile/
 
@@ -77,8 +77,9 @@ Data science base images:
 - https://hub.docker.com/r/continuumio/anaconda3/
 - https://www.continuum.io/blog/developer-blog/anaconda-and-docker-better-together-reproducible-data-science
 
-Alpine Linux (5 MB) is a minimal image that can serve as a starting point:
-- https://hub.docker.com/r/library/alpine/
+`Alpine Linux`_ (5 MB) is a minimal image that can serve as a starting point.
+
+.. _`Alpine Linux`: https://hub.docker.com/r/library/alpine/
 
 With this use Dockerfile containing e.g.:
 
@@ -92,19 +93,19 @@ With this use Dockerfile containing e.g.:
 Steps to create a Dockerfile
 ############################
 
-1) Write a dockerfile 
+1) Write a dockerfile, see:
 
 - https://docs.docker.com/engine/getstarted/step_four/
 - https://docs.docker.com/engine/getstarted/step_four/#step-4-run-your-new-docker-whale
 
-Dockerfile for data science example:
+Dockerfile for data science examples:
 
 - http://tlfvincent.github.io/2016/04/30/data-science-with-docker/
 - https://www.dataquest.io/blog/docker-data-science/
 
-Minimal alpine Python 3 image:
+`Minimal alpine Python 3 image`_ example.
 
-- https://github.com/jfloff/alpine-python
+.. _`Minimal alpine Python 3 image`: https://github.com/jfloff/alpine-python
 
 -----
 
@@ -113,10 +114,10 @@ Dockerfile contents:
 .. code-block:: bash
 
 	# specifiy base image
-    FROM ubuntu:14.04 # also FROM jupyter/scipy-notebook
+	FROM ubuntu:14.04 # also FROM jupyter/scipy-notebook
 
 	# provide creator/maintainer of this Dockerfile
-    MAINTAINER Antonio J Berlanga-Taylor <a.berlanga@imperial.ac.uk>
+	MAINTAINER Antonio J Berlanga-Taylor <a.berlanga@imperial.ac.uk>
 
 	# Specify some of the useful system tools and libraries to include in the Ubuntu bare bones image:
 
@@ -125,7 +126,7 @@ Dockerfile contents:
 	# RUN cmds are linux cmds
 
 	# install useful system tools and libraries
-    RUN apt-get install -y libfreetype6-dev && \
+	RUN apt-get install -y libfreetype6-dev && \
 		apt-get install -y libglib2.0-0 \
 		libxext6 \
 		libsm6 \
@@ -155,7 +156,7 @@ Dockerfile contents:
 
 	# install useful and/or required Python libraries to run your script
 	# # TO DO: change for conda recipe, Bioc image, etc.
-    RUN pip install matplotlib \
+	RUN pip install matplotlib \
                 seaborn \
                 pandas \
                 numpy \
@@ -250,9 +251,9 @@ Get system info:
 	docker info
 
 
-Remove old containers and images:
+`Remove old containers and images`_:
 
-http://stackoverflow.com/questions/17236796/how-to-remove-old-docker-containers
+.. _`Remove old containers and images`: http://stackoverflow.com/questions/17236796/how-to-remove-old-docker-containers
 
 .. code-block:: bash
 
@@ -272,9 +273,9 @@ Stop and remove all containers:
 
 -----
 
-Create a Docker Hub account to upload your images, see:
+Create a `Docker Hub account`_ to upload your images and make them available to others.
 
-https://docs.docker.com/engine/getstarted/step_five/
+.. _`Docker Hub account`: https://docs.docker.com/engine/getstarted/step_five/
 
 
 Testing workflow example
@@ -283,6 +284,10 @@ Testing workflow example
 Create a Dockerfile as above, see for example:
 
 https://github.com/AntonioJBT/project_quickstart/blob/master/Dockerfile
+
+See these minimal images with `Alpine and Python`_ for instance.
+
+.. _`Alpine and Python`: https://github.com/jfloff/alpine-python
 
 Copy Dockerfile to test directory (not necessary though), build image locally and run:
 
