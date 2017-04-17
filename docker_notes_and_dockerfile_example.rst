@@ -6,27 +6,40 @@ Docker workflow notes and Dockerfile example
 :Date: July 3 2016
 
 
-Some links and references
-#########################
+Docker_ is software for container platforms. Containers are like virtual machines (but generally better, see links below).
 
-- https://docs.docker.com/engine/getstarted/
-- https://www.nersc.gov/assets/Uploads/cug2015udi.pdf
-- https://www.continuum.io/blog/developer-blog/anaconda-and-docker-better-together-reproducible-data-science
-- http://cdn.oreillystatic.com/en/assets/1/event/144/Docker%20for%20data%20scientists%20Presentation.pdf
-- https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices
+You can use Docker to develop tools in your local machine (regardless of its own operating system) and test without worrying about how your software will perform in a different environment.
+
+Docker automates setting up and configuring environments. This makes it easy to build software, collaborate with others in data analysis, etc.
+
+You can specify in your Dockerfile all the needed dependencies and instructions to run your application, scripts, etc.
+
+Your application could be software for others or even your specific data analysis project.
+
+The Dockerfile can be like a lab notebook containing instructions on the computing environment, external and internal software, versions used and example data for instance.
+
+Learning Docker and writing a Dockerfile may be time consuming initially but could save you and collaborators  major headaches when you try to reproduce results.
+
+You can find many and better tutorials online and in the official `Docker documentation`_. As with other files in this repository, these are basic notes, links and reminders to get started.
+
+.. _Docker: https://www.docker.com/
+
+.. _`Docker documentation`: https://docs.docker.com/engine/getstarted/
 
 
-TO DO
-#####
+.. note::
 
-- Integrate with GitHub and Travis ?
-- Use dockerHub to push and pull akin to GitHub (integrate?)
+    Some code snipets, info, etc. is directly from some of the references. Files need cleaning up.
 
 
 Docker notes
 ############
 
-General steps:
+General steps to create a Dockerfile (see more details below):
+
+See `Dockerfile writing best practice guidelines`_.
+
+.. _`Dockerfile writing best practice guidelines`: https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices 
 
 1) Create a file called Dockerfile, which we will use to place the relevant instructions and commands that will define what our container can do
 2) Build the Docker container, this will install and apply all the environment variables and configurations that you have specified in the Dockerfile
@@ -45,7 +58,8 @@ Base image with all the tools needed except the application itself:
 Copy the Dockerfile, eg:
 
 - https://hub.docker.com/r/continuumio/miniconda3/~/dockerfile/
-- Add necessary tools to it and run as in steps above.
+
+Add necessary tools to it and run as in steps above.
 
 Otherwise, pull already available image and work from there:
 
@@ -55,6 +69,7 @@ Do e.g.:
 	
 	docker pull continuumio/miniconda3
 	docker run -i -t continuumio/miniconda3 /bin/bash
+
 
 Data science base images:
 
@@ -74,14 +89,16 @@ With this use Dockerfile containing e.g.:
 	ENTRYPOINT ["mysql"]
 
 
-General steps to create a Dockerfile
-####################################
+Steps to create a Dockerfile
+############################
 
 1) Write a dockerfile 
 
 - https://docs.docker.com/engine/getstarted/step_four/
 - https://docs.docker.com/engine/getstarted/step_four/#step-4-run-your-new-docker-whale
-- Dockerfile for data science example:
+
+Dockerfile for data science example:
+
 - http://tlfvincent.github.io/2016/04/30/data-science-with-docker/
 - https://www.dataquest.io/blog/docker-data-science/
 
@@ -93,13 +110,13 @@ Minimal alpine Python 3 image:
 
 Dockerfile contents:
 
-..code-block:: bash
+.. code-block:: bash
 
 	# specifiy base image
-	FROM ubuntu:14.04 # also FROM jupyter/scipy-notebook
+    FROM ubuntu:14.04 # also FROM jupyter/scipy-notebook
 
 	# provide creator/maintainer of this Dockerfile
-	MAINTAINER Antonio J Berlanga-Taylor <a.berlanga@imperial.ac.uk>
+    MAINTAINER Antonio J Berlanga-Taylor <a.berlanga@imperial.ac.uk>
 
 	# Specify some of the useful system tools and libraries to include in the Ubuntu bare bones image:
 
@@ -108,7 +125,7 @@ Dockerfile contents:
 	# RUN cmds are linux cmds
 
 	# install useful system tools and libraries
-	RUN apt-get install -y libfreetype6-dev && \
+    RUN apt-get install -y libfreetype6-dev && \
 		apt-get install -y libglib2.0-0 \
 		libxext6 \
 		libsm6 \
@@ -131,7 +148,6 @@ Dockerfile contents:
 	# TO DO: change for conda, eg:
 	# https://hub.docker.com/r/continuumio/miniconda/
 	# from where jupyter can run
-
 	RUN apt-get install -y python \
 		python-dev \
 		python-distribute \
@@ -139,7 +155,7 @@ Dockerfile contents:
 
 	# install useful and/or required Python libraries to run your script
 	# # TO DO: change for conda recipe, Bioc image, etc.
-	RUN pip install matplotlib \
+    RUN pip install matplotlib \
                 seaborn \
                 pandas \
                 numpy \
@@ -185,7 +201,7 @@ Create and enter a folder where data is located and/or will be saved:
 
 .. code-block:: bash
 
-cd ~/Documents/github.dir/docker_tests.dir
+    cd ~/Documents/github.dir/docker_tests.dir
 
 Install Docker on the platform to use beforehand:
 
@@ -272,10 +288,12 @@ Copy Dockerfile to test directory (not necessary though), build image locally an
 
 .. code-block:: bash
 	
-	cp ../AntonioJBT/project_quickstart/Dockerfile . 
-	docker build -t antoniojbt/project_quickstart .
+    mkdir docker_tests
+    cd docker_tests
+	cp ../github_xxx/project_xxx/Dockerfile . 
+	docker build -t user_xxx/my_docker_tag .
 	docker images
-	docker run --rm -ti antoniojbt/project_quickstart
+	docker run --rm -ti user_xxx/my_docker_tag
 
 Clean up:
 
@@ -286,3 +304,24 @@ Clean up:
 	docker rmi $(docker images -f "dangling=true" -q)
 	docker ps -a
 	docker rm $(docker ps -a -q)
+
+
+You can then go back to your code, make changes, push/pull to your version control system and start again with Dockerfile to test your package in a different environment to your machine.
+
+
+TO DO
+#####
+
+- Integrate with GitHub and Travis ?
+- Use dockerHub to push and pull akin to GitHub (integrate?)
+
+
+Additional links and references
+###############################
+
+- https://www.nersc.gov/assets/Uploads/cug2015udi.pdf
+- https://www.continuum.io/blog/developer-blog/anaconda-and-docker-better-together-reproducible-data-science
+- http://cdn.oreillystatic.com/en/assets/1/event/144/Docker%20for%20data%20scientists%20Presentation.pdf
+
+
+
