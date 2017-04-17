@@ -293,8 +293,8 @@ Copy Dockerfile to test directory (not necessary though), build image locally an
 
 .. code-block:: bash
 	
-    mkdir docker_tests
-    cd docker_tests
+	mkdir docker_tests
+	cd docker_tests
 	cp ../github_xxx/project_xxx/Dockerfile . 
 	docker build -t user_xxx/my_docker_tag .
 	docker images
@@ -327,6 +327,3 @@ Additional links and references
 - https://www.nersc.gov/assets/Uploads/cug2015udi.pdf
 - https://www.continuum.io/blog/developer-blog/anaconda-and-docker-better-together-reproducible-data-science
 - http://cdn.oreillystatic.com/en/assets/1/event/144/Docker%20for%20data%20scientists%20Presentation.pdf
-
-
-
