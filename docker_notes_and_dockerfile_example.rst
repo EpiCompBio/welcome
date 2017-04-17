@@ -267,8 +267,8 @@ Stop and remove all containers:
 
 .. code-block:: bash
 
-	docker stop $(docker ps -a -q)
-	docker rm $(docker ps -a -q)
+	docker stop $(docker ps -aq)
+	docker rm $(docker ps -aq)
 
 
 -----
@@ -295,21 +295,20 @@ Copy Dockerfile to test directory (not necessary though), build image locally an
 	
 	mkdir docker_tests
 	cd docker_tests
-	cp ../github_xxx/project_xxx/Dockerfile . 
-	docker build -t user_xxx/my_docker_tag .
-	docker images
-	docker run --rm -ti user_xxx/my_docker_tag
+	cp /path_to/project_xxx/Dockerfile .
+	docker build --no-cache=true -t user_xxx/my_docker_tag . # Build a local image, disable the cache
+	docker images # Check it's there
+	docker run --rm -ti user_xxx/my_docker_tag # Run your image interactively and remove the container when exiting
 
 Clean up:
 
 .. code-block:: bash
 
-	docker images
-	docker images -f "dangling=true"
-	docker rmi $(docker images -f "dangling=true" -q)
-	docker ps -a
-	docker rm $(docker ps -a -q)
-
+	docker images -a # Show all images
+	docker images -f "dangling=true" # Show <none> images
+	docker rmi $(docker images -qf "dangling=true") # Delete <none> images
+	docker ps -a # Show all containers
+	docker rm $(docker ps -aq) # Delete them
 
 You can then go back to your code, make changes, push/pull to your version control system and start again with Dockerfile to test your package in a different environment to your machine.
 
