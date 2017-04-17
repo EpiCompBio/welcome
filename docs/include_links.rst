@@ -15,6 +15,7 @@
 
 .. include:: ../pipeline_tools_references.rst
 .. include:: ../docopt_argument_parser.rst
+.. include:: ../docker_notes_and_dockerfile_example.rst
 
 .. include:: ../work_done_and_to_do_list.rst
 
