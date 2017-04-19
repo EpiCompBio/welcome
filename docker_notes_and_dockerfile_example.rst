@@ -300,6 +300,17 @@ Copy Dockerfile to test directory (not necessary though), build image locally an
 	docker images # Check it's there
 	docker run --rm -ti user_xxx/my_docker_tag # Run your image interactively and remove the container when exiting
 
+If you didn't share a volume between the container and host, you can copy files across with `docker cp`_ (see also `question on Stack Overflow`_):
+
+.. _`docker cp`: https://docs.docker.com/engine/reference/commandline/cp/
+
+.. _`question on Stack Overflow`: http://stackoverflow.com/questions/22907231/copying-files-from-host-to-docker-container
+
+.. code-block:: bash
+
+	docker ps -a # to get the container numeric ID
+	docker cp b0cbb62d9cd7:/home/my_files.tar.gz . # docker cp <numeric ID>:/full_path/to/file /host/location/
+
 Aggressive clean up:
 
 .. code-block:: bash
