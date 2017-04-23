@@ -55,7 +55,7 @@ Base image with all the tools needed except the application itself:
 	- Conda
  	- Apline Linux (minimalistic)
 
-Copy the Dockerfile, eg:
+Copy the Dockerfile, e.g.:
 
 - https://hub.docker.com/r/continuumio/miniconda3/~/dockerfile/
 
@@ -77,8 +77,9 @@ Data science base images:
 - https://hub.docker.com/r/continuumio/anaconda3/
 - https://www.continuum.io/blog/developer-blog/anaconda-and-docker-better-together-reproducible-data-science
 
-Alpine Linux (5 MB) is a minimal image that can serve as a starting point:
-- https://hub.docker.com/r/library/alpine/
+`Alpine Linux`_ (5 MB) is a minimal image that can serve as a starting point.
+
+.. _`Alpine Linux`: https://hub.docker.com/r/library/alpine/
 
 With this use Dockerfile containing e.g.:
 
@@ -92,19 +93,19 @@ With this use Dockerfile containing e.g.:
 Steps to create a Dockerfile
 ############################
 
-1) Write a dockerfile 
+1) Write a dockerfile, see:
 
 - https://docs.docker.com/engine/getstarted/step_four/
 - https://docs.docker.com/engine/getstarted/step_four/#step-4-run-your-new-docker-whale
 
-Dockerfile for data science example:
+Dockerfile for data science examples:
 
 - http://tlfvincent.github.io/2016/04/30/data-science-with-docker/
 - https://www.dataquest.io/blog/docker-data-science/
 
-Minimal alpine Python 3 image:
+`Minimal alpine Python 3 image`_ example.
 
-- https://github.com/jfloff/alpine-python
+.. _`Minimal alpine Python 3 image`: https://github.com/jfloff/alpine-python
 
 -----
 
@@ -113,10 +114,10 @@ Dockerfile contents:
 .. code-block:: bash
 
 	# specifiy base image
-    FROM ubuntu:14.04 # also FROM jupyter/scipy-notebook
+	FROM ubuntu:14.04 # also FROM jupyter/scipy-notebook
 
 	# provide creator/maintainer of this Dockerfile
-    MAINTAINER Antonio J Berlanga-Taylor <a.berlanga@imperial.ac.uk>
+	MAINTAINER Antonio J Berlanga-Taylor <a.berlanga@imperial.ac.uk>
 
 	# Specify some of the useful system tools and libraries to include in the Ubuntu bare bones image:
 
@@ -125,7 +126,7 @@ Dockerfile contents:
 	# RUN cmds are linux cmds
 
 	# install useful system tools and libraries
-    RUN apt-get install -y libfreetype6-dev && \
+	RUN apt-get install -y libfreetype6-dev && \
 		apt-get install -y libglib2.0-0 \
 		libxext6 \
 		libsm6 \
@@ -155,7 +156,7 @@ Dockerfile contents:
 
 	# install useful and/or required Python libraries to run your script
 	# # TO DO: change for conda recipe, Bioc image, etc.
-    RUN pip install matplotlib \
+	RUN pip install matplotlib \
                 seaborn \
                 pandas \
                 numpy \
@@ -250,9 +251,9 @@ Get system info:
 	docker info
 
 
-Remove old containers and images:
+`Remove old containers and images`_:
 
-http://stackoverflow.com/questions/17236796/how-to-remove-old-docker-containers
+.. _`Remove old containers and images`: http://stackoverflow.com/questions/17236796/how-to-remove-old-docker-containers
 
 .. code-block:: bash
 
@@ -266,15 +267,15 @@ Stop and remove all containers:
 
 .. code-block:: bash
 
-	docker stop $(docker ps -a -q)
-	docker rm $(docker ps -a -q)
+	docker stop $(docker ps -aq) # stop is 'graceful', can also use docker kill $(docker ps -aq)
+	docker rm $(docker ps -aq)
 
 
 -----
 
-Create a Docker Hub account to upload your images, see:
+Create a `Docker Hub account`_ to upload your images and make them available to others.
 
-https://docs.docker.com/engine/getstarted/step_five/
+.. _`Docker Hub account`: https://docs.docker.com/engine/getstarted/step_five/
 
 
 Testing workflow example
@@ -284,27 +285,45 @@ Create a Dockerfile as above, see for example:
 
 https://github.com/AntonioJBT/project_quickstart/blob/master/Dockerfile
 
+See these minimal images with `Alpine and Python`_ for instance.
+
+.. _`Alpine and Python`: https://github.com/jfloff/alpine-python
+
 Copy Dockerfile to test directory (not necessary though), build image locally and run:
 
 .. code-block:: bash
 	
-    mkdir docker_tests
-    cd docker_tests
-	cp ../github_xxx/project_xxx/Dockerfile . 
-	docker build -t user_xxx/my_docker_tag .
-	docker images
-	docker run --rm -ti user_xxx/my_docker_tag
+	mkdir docker_tests
+	cd docker_tests
+	cp /path_to/project_xxx/Dockerfile .
+	docker build --no-cache=true -t user_xxx/my_docker_tag . # Build a local image, disable the cache
+	docker images # Check it's there
+	docker run --rm -ti user_xxx/my_docker_tag # Run your image interactively and remove the container when exiting
 
-Clean up:
+If you didn't share a volume between the container and host, you can copy files across with `docker cp`_ (see also `question on Stack Overflow`_):
+
+.. _`docker cp`: https://docs.docker.com/engine/reference/commandline/cp/
+
+.. _`question on Stack Overflow`: http://stackoverflow.com/questions/22907231/copying-files-from-host-to-docker-container
 
 .. code-block:: bash
 
-	docker images
-	docker images -f "dangling=true"
-	docker rmi $(docker images -f "dangling=true" -q)
-	docker ps -a
-	docker rm $(docker ps -a -q)
+	docker ps -a # to get the container numeric ID
+	docker cp b0cbb62d9cd7:/home/my_files.tar.gz . # docker cp <numeric ID>:/full_path/to/file /host/location/
 
+Aggressive clean up:
+
+.. code-block:: bash
+
+	docker images -a # Show all images
+	docker images -f "dangling=true" # Show <none> images, remains of previous builds
+	docker rmi $(docker images -qf "dangling=true") # Delete <none> images, add '-a' option to delete ALL images
+	docker ps -a # Show all containers
+	docker stop $(docker ps -aq) # stop is 'graceful', can also use docker kill $(docker ps -aq)
+	docker rm $(docker ps -aq) # Delete all containers
+	
+	# A softer removal of containers:
+	docker rm $(docker ps -f "status=exited" -f "status=created" -q)
 
 You can then go back to your code, make changes, push/pull to your version control system and start again with Dockerfile to test your package in a different environment to your machine.
 
@@ -322,6 +341,3 @@ Additional links and references
 - https://www.nersc.gov/assets/Uploads/cug2015udi.pdf
 - https://www.continuum.io/blog/developer-blog/anaconda-and-docker-better-together-reproducible-data-science
 - http://cdn.oreillystatic.com/en/assets/1/event/144/Docker%20for%20data%20scientists%20Presentation.pdf
-
-
-
