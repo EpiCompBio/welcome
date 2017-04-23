@@ -11,6 +11,9 @@
 .. include:: ../notes_technical_documentation_tools.rst
 .. include:: ../rst_basics.rst
 .. include:: ../sphinx_rst_read_the_docs.rst
+.. include:: ../file_with_include.rst
+.. include:: ../substitution_vars.rst
+
 .. include:: ../continuous_integration_start.rst
 
 .. include:: ../pipeline_tools_references.rst
