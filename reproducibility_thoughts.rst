@@ -36,7 +36,9 @@ Data analysis (of any size) should aim to have:
 + Ideally automation and re-usability
 + Unit testing at its basic: does my new code change my expected results?
 
-We've started with this GitHub account (https://github.com/EpiCompBio/)
+We've started with the EpiCompBio_ GitHub account
+
+.. _EpiCompBio: https://github.com/EpiCompBio/
 
 There are many tools out there that aim to put the above into practice (see list of pipeline review references for example).
 
@@ -116,6 +118,7 @@ References on data analysis and reproducibility
 .. _`Enhancing reproducibility for computational methods`: http://science.sciencemag.org/content/354/6317/1240.full
 
 `Liberating field science samples and data`_
+
 .. _`Liberating field science samples and data`: http://science.sciencemag.org/content/351/6277/1024.full
 
 `Promoting an open research culture`_
