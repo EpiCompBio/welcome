@@ -1,6 +1,12 @@
-#######################
-Best practice checklist
-#######################
+########################
+Best practice checklists
+########################
+
+See also:
+
+`Ten simple rules for making research software more robust`_
+
+.. _`Ten simple rules for making research software more robust`: http://journals.plos.org/ploscompbiol/article/file?type=supplementary&id=info:doi/10.1371/journal.pcbi.1005412.s001
 
 
 *Box 1*
@@ -9,9 +15,9 @@ Best practice checklist
 
 -----
 
-Source_ reference
+Reference: `Artaza et al., 2016`_
 
-.. _Source: https://f1000research.com/articles/5-2000/v1
+.. _`Artaza et al., 2016`: https://pdfs.semanticscholar.org/e97a/fab563df8852f5075254c1cfde98107a68d6.pdf
 
 -----
 
