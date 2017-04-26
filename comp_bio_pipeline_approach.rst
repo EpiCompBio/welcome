@@ -49,7 +49,7 @@ Python_:
 
 Ultimately a combination of unix (or equivalent compute environment), stats and programming is needed. Different people do/use different combinations.
 
-Using python, R and *nix is pretty powerful and a well trodden path.
+Using python, R and Unix is pretty powerful and a well trodden path.
 
 The main/basic idea is to be able to structure scripts into packages and re-use them (or at least freeze and present them at publication).
 
@@ -83,21 +83,19 @@ There's a lot out there on software structure, see for example:
 
 UNIX is at the heart of most of the common and powerful operating systems available. See: 
 
-	Phylosophy_
+Phylosophy_
 	
 .. _Phylosophy: https://en.wikipedia.org/wiki/Unix_philosophy
 	
-	`A classic book on UNIX`_:
+`A classic book on UNIX`_:
 
-		The Unix Programming Environment (Prentice-Hall Software Series) Paperback – 1 Nov 1983
-		by Brian W. Kernighan (Author), Rob Pike (Author)
+	The Unix Programming Environment (Prentice-Hall Software Series) Paperback – 1 Nov 1983 by Brian W. Kernighan (Author), Rob Pike (Author)
 		
 .. _`A classic book on UNIX`: http://cs2.ist.unomaha.edu/~stanw/163/csci4500/UNIXProgrammingEnvironment.pdf
 
-	`A general update on the above`_: 
+`A general update on the above`_: 
 
-		The Art of Unix Programming (Addison-Wesley Professional Computing) Paperback – 23 Sep 2003
-		by Eric S. Raymond (Author)
+	The Art of Unix Programming (Addison-Wesley Professional Computing) Paperback – 23 Sep 2003 by Eric S. Raymond (Author)
 		
 .. _`A general update on the above`: https://www.amazon.co.uk/Unix-Programming-Addison-Wesley-Professional-Computing/dp/0131429019
 
@@ -120,7 +118,9 @@ In general, pipelines should ideally be:
 
 A big problem across the field is portability, currently without good answers, but pipelines can go some way towards this.
 	
-The general approach I'm suggesting is the one followed by CGAT (www.cgat.org), which in turn adopts many current computational best practice standards). See:
+The general approach I'm suggesting is the one used at CGAT_, which in turn adopts many current computational best practice standards). See:
+
+.. _CGAT: www.cgat.org
 
 + https://github.com/CGATOxford
 + https://github.com/CGATOxford/cgat
@@ -132,10 +132,10 @@ The CGAT Code Collection includes cgat scripts for genomics and CGAT Pipelines, 
 
 CGAT scripts and pipelines use popular, open source, mostly free, proven tools with excellent community support such as Python, R, Github, Travis CI, plus the myriad of genomics and biology software options for specific tasks.
 
-A lot of this work is in beta (as are most pipeline approaches, of which there are many, galaxy is a well known one and could be an answer but version control, scalability and other issues exist, it is designed to ease use for biologists and works well like this). For galaxy see for example:
+A lot of this work is in beta (as are most pipeline approaches, of which there are many, galaxy is a well known one and could be an answer but version control, scalability and other issues exist, it is designed to ease use for biologists and works well like this). See Galaxy_ and the Biostars_ community for example.
 
-	https://en.wikipedia.org/wiki/Galaxy_(computational_biology)
-	https://www.biostars.org/p/50034/
+.. _Galaxy: https://en.wikipedia.org/wiki/Galaxy_(computational_biology)
+.. _Biostars: https://www.biostars.org/p/50034/
 
 CGAT is based on Ruffus_, a python pipeline tool which is flexible, powerful and readable (being python).
 
