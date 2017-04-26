@@ -43,7 +43,8 @@ Using Python and UNIX philosophy as the building bases
 ######################################################
 
 Python_:
-	Python is a popular, well-supported, general programming language which is flexible, powerful and readable. A great choice overall for beginners. It can serve as the glue for pipelines even if many scripts and programs are in other languages. Ruby, Perl and others are largely equivalent. There are dozens of online source for learning and a very active community:
+
+	Python is a popular, well-supported, general programming language which is flexible, powerful and readable. A great choice overall for beginners. It can serve as the glue for pipelines even if many scripts and programs are in other languages. Ruby, Perl and others are largely equivalent. There are dozens of online source for learning and a very active community.
 
 .. _Python: https://www.python.org/
 
@@ -147,6 +148,7 @@ CGAT Pipelines have their own backbone (for controlling jobs, communicating with
 
 .. _`See the backbone scripts`: https://github.com/CGATOxford/CGATPipelines/tree/master/CGATPipelines/Pipeline
 
+
 A pipeline example can be:
 
 + https://www.cgat.org/downloads/public/cgatpipelines/documentation/pipelines/pipeline_mapping.html
@@ -154,7 +156,8 @@ A pipeline example can be:
 + https://github.com/CGATOxford/CGATPipelines/blob/master/CGATPipelines/PipelineMapping.py
 + https://github.com/CGATOxford/CGATPipelines/blob/master/CGATPipelines/pipeline_mapping.py
 
- Limitations of CGAT (but common to these types of tools) are:
+
+Limitations of CGAT (but common to these types of tools) are:
 
 + Pipelines have many dependencies
 + Setting up the initial environment is often very problematic
