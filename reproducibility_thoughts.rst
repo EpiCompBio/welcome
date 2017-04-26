@@ -83,7 +83,7 @@ Unix and command line basics
 
 `Basic tutorial`_ 
 
-.. _ `Basic tutorial`: http://www.ee.surrey.ac.uk/Teaching/Unix/index.html
+.. _`Basic tutorial`: http://www.ee.surrey.ac.uk/Teaching/Unix/index.html
 
 `SC shell novice`_
 
