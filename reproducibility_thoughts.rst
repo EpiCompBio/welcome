@@ -111,11 +111,13 @@ References on data analysis and reproducibility
 
 .. _`Reproducible Research in Computational Science`: http://science.sciencemag.org/content/334/6060/1226
 
-- Enhancing reproducibility for computational methods
-http://science.sciencemag.org/content/354/6317/1240.full
+`Enhancing reproducibility for computational methods`_
 
-- Liberating field science samples and data | Science
-http://science.sciencemag.org/content/351/6277/1024.full
+.. _`Enhancing reproducibility for computational methods`: http://science.sciencemag.org/content/354/6317/1240.full
 
-- Promoting an open research culture | Science
-http://science.sciencemag.org/content/348/6242/1422.full
+`Liberating field science samples and data`_
+.. _`Liberating field science samples and data`: http://science.sciencemag.org/content/351/6277/1024.full
+
+`Promoting an open research culture`_
+
+.. _`Promoting an open research culture`: http://science.sciencemag.org/content/348/6242/1422.full
