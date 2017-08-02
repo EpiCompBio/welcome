@@ -41,6 +41,29 @@ These commands need to be run where the conf.py and other Sphinx templates are, 
 
 .. _project_quickstart: https://github.com/AntonioJBT/project_quickstart
 
+
+pandoc common commands
+######################
+
+See `pandoc demos`_
+
+.. _`pandoc demos`: http://pandoc.org/demos.html
+
+Some examples for rst to PDF:
+
+.. code-block::
+	
+	pandoc my_file.rst -o my_file.pdf
+	pandoc --toc my_file.rst -o my_file.pdf # with table of contents
+
+Use option ``--bibliography=FILE`` for rendering citations.
+
+Word docx:
+
+.. code-block::
+
+	pandoc -s -S MANUAL.txt -o example29.docx
+
 -----
 
 Links with more information (some are old):
