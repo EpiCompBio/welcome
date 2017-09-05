@@ -13,6 +13,7 @@
 .. include:: ../sphinx_rst_read_the_docs.rst
 .. include:: ../file_with_include.rst
 .. include:: ../substitution_vars.rst
+.. include:: ../SVG_multi_panel_plots.rst
 
 .. include:: ../continuous_integration_start.rst
 
