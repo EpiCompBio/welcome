@@ -1,41 +1,27 @@
-Creating figure layouts programmatically
-########################################
+Creating figure layouts for publication programmatically
+########################################################
 
-With python and rst
-+++++++++++++++++++
+It seems surprisingly hard to find tools for this. The current workflow I'd suggest (based on Python, essentially out of 
+the `svgutils blog`_):
 
-rst doesn't have a specific layout tool (?), `some workarounds`_
+1. Plot with any tool, save as svg
+2. Import figures you want into sgvutils
+3. Create legends, titles, layout, etc.
+4. Save multi-panel figure as svg
 
-.. _`some workarounds`: http://stackoverflow.com/questions/10219634/image-grid-in-restructuredtext-sphinx/10229407#10229407
+You can then:
 
-`Image rst directive details`_
+5. Convert svg to pdf (with inkscape on the command line for example)
+6. Insert images into rst with image and other directives to create a file with text, figures, tables, etc. and which can later be converted to pdf or html.
 
-.. _`Image rst directive details`: http://docutils.sourceforge.net/docs/ref/rst/directives.html#images
+See below for details, references and basic examples. I haven't tested many of these but left them here as suggestions.
 
-e.g. 
+Python and svg
+++++++++++++++
 
-.. code-block::
+Python package svgutils_, probably the one to use, starts and ends with svg files.
 
-	.. image:: _images/report_title.png
-	   :width: 30%
-	.. image:: _images/report_slide1.png
-	   :width: 30%
-	.. image:: _images/report_slide2.png
-	   :width: 30%
-
-
-`Wrap figures in a table within rst`_
-
-.. _`Wrap figures in a table within rst`: http://stackoverflow.com/questions/12148428/rest-image-grid-with-captions?noredirect=1&lq=1
-
-
-Python package svgutils_, probably the one to use, starts from SVG
-
-.. _svgutils: https://github.com/btel/svg_utils
-
-`See this explanation`_. 
-
-.. _`See this explanation`: http://svgutils.readthedocs.io/en/latest/tutorials/composing_multipanel_figures.html
+`See this explanation`_ for more details.
 
 .. code-block:: python
 
@@ -53,6 +39,106 @@ Python package svgutils_, probably the one to use, starts from SVG
             ).save("fig_final_compose.svg")
 
 
+A similar package is `svg_stack: concatenate SVG files`_
+
+A useful svg utility package might be scour_.
+
+.. _svgutils: https://github.com/btel/svg_utils
+
+.. _`svgutils blog`: https://neuroscience.telenczuk.pl/?p=331
+
+.. _`See this explanation`: http://svgutils.readthedocs.io/en/latest/tutorials/composing_multipanel_figures.html
+
+.. _`svg_stack: concatenate SVG files`: https://github.com/astraw/svg_stack
+
+.. _scour: https://github.com/scour-project/scour
+
+
+Convert SVG to other formats
+++++++++++++++++++++++++++++
+
+Inkscape_
+
+.. _Inkscape: https://inkscape.org/en/download/mac-os/
+
+e.g.
+
+.. code-block:: bash
+
+    inkscape --file=fig_final.svg --export-area-drawing --without-gui --export-pdf=output.pdf
+
+Full suite, equivalent to Adobe Illustrator but open source and free.
+
+To install in Mac you can use:
+
+.. code-block:: bash
+
+    brew install caskformula/caskformula/inkscape
+
+Another package for image file conversions is CairoSVG_.
+
+.. _CairoSVG: http://cairosvg.org/
+
+.. code-block:: bash
+    
+    cairosvg -o fig_final.pdf fig_final.svg
+
+
+restructuredText and SVG
+########################
+
+See the documentation on `reStructuredText and svg`_. The mix of pdf, svg, rst, html, etc. can become nightmarish.
+
+rst doesn't seem to have a specific figure layout tool but there are `some workarounds`_.
+
+See the `image rst directive details`_ for more information and examples.
+
+There is also the figure directive.
+
+e.g. 
+
+.. code-block::
+
+    .. image:: _images/report_title.svg
+       :width: 30%
+    
+    .. image:: _images/report_slide1.svg
+       :width: 30%
+
+    .. image:: _images/report_slide2.svg
+        :width: 30%
+
+    .. image:: picture.svg
+       :scale: 100 %
+       :alt: alternate text
+       :align: right
+
+Latex does not support svg, requiring first to convert svg files to pdf or eps. Inkscape can be used for this.
+
+If you're using latex `see this document`_ for further help.
+
+.. code-block:: bash
+
+    inkscape -D -z --file=image.svg --export-pdf=image.pdf --export-latex
+
+There is a `Sphinx svg image directive`_ that you can try:
+
+.. _`Sphinx svg image directive`: http://docutils-ext.readthedocs.io/en/latest/svgt.html
+
+
+Tables are a different matter altogether. You can `wrap figures in a table within rst`_.
+
+.. _`wrap figures in a table within rst`: http://stackoverflow.com/questions/12148428/rest-image-grid-with-captions?noredirect=1&lq=1
+
+.. _`reStructuredText and svg`: http://docutils.sourceforge.net/test/functional/expected/standalone_rst_html4css1.html#svg-images
+
+.. _`some workarounds`: http://stackoverflow.com/questions/10219634/image-grid-in-restructuredtext-sphinx/10229407#10229407
+
+.. _`image rst directive details`: http://docutils.sourceforge.net/docs/ref/rst/directives.html#images
+
+.. _`see this document`: http://mirrors.concertpass.com/tex-archive/info/svg-inkscape/InkscapePDFLaTeX.pdf
+
+
 With R
 ++++++
 
@@ -67,90 +153,72 @@ Use imager_ (also here__) package which can import vector graphics, but is meant
 .. _imager: http://dahtah.github.io/imager/
 
 
-Convert SVG to other formats
-++++++++++++++++++++++++++++
+`Create and format PowerPoint documents from R software - Easy Guides - Wiki - STHDA`_
 
-CairoSVG_
+.. _`Create and format PowerPoint documents from R software - Easy Guides - Wiki - STHDA`: http://www.sthda.com/english/wiki/create-and-format-powerpoint-documents-from-r-software#add-plots-and-images
 
-.. _CairoSVG: http://cairosvg.org/
 
-e.g.
+`Microsoft Word and PowerPoint Documents Generation ReporteRs package`_
 
-.. code-block:: bash
-    
-    cairosvg -o fig_final.pdf fig_final.svg
+.. _`Microsoft Word and PowerPoint Documents Generation ReporteRs package`: http://davidgohel.github.io/ReporteRs/index.html
 
-Works well, python library, only converts
 
-Inkscape_
+`CRAN - Package cowplot`_
 
-.. _Inkscape: https://inkscape.org/en/download/mac-os/
+.. _`CRAN - Package cowplot`: https://cran.r-project.org/web/packages/cowplot/index.html
 
-e.g.
 
-.. code-block:: bash
+`Arranging plots in a grid`_
 
-    inkscape --file=fig_final.svg --export-area-drawing --without-gui --export-pdf=output.pdf
+.. _`Arranging plots in a grid`: https://cran.r-project.org/web/packages/cowplot/vignettes/plot_grid.html
 
-Full suite though, equivalent to Adobe Illustrator
+`CMBX12 - import.pdf`_
 
-Use:
+.. _`CMBX12 - import.pdf`: https://cran.r-project.org/web/packages/grImport/vignettes/import.pdf
 
-.. code-block:: bash
-
-    brew install caskformula/caskformula/inkscape
-
-to install version 0.92.1, this works well.
 
 Python image manipulators
 +++++++++++++++++++++++++
 
-OpenCV
+OpenCV_
 
-PIL Pillow Fork
+.. _OpenCV: https://opencv-python-tutroals.readthedocs.io/en/latest/#
+
+`PIL Pillow Fork`_
+
+.. _`PIL Pillow Fork`: https://pillow.readthedocs.io/en/4.0.x/
 
 Both are for statistical image processing
 
-References to check
-+++++++++++++++++++
+
+Other references
+++++++++++++++++
 
 `How to Create Publication-Quality Figures`_
 
 .. _`How to Create Publication-Quality Figures`: http://cellbio.emory.edu/bnanes/figures/#414
 
-https://inkscape.org/en/about/overview/
-Overview | Inkscape
-http://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1003833&type=printable
-pcbi.1003833 1..7 - file
-http://unix.stackexchange.com/questions/42856/how-can-i-convert-a-png-to-a-pdf-in-high-quality-so-its-not-blurry-or-fuzzy
-imagemagick - How can I convert a PNG to a PDF in high quality so it's not blurry or fuzzy? - Unix & Linux Stack Exchange
-http://dahtah.github.io/imager/gimptools.html
-Imager as image editor
-http://www.sthda.com/english/wiki/create-and-format-powerpoint-documents-from-r-software#add-plots-and-images
-Create and format PowerPoint documents from R software - Easy Guides - Wiki - STHDA
-http://davidgohel.github.io/ReporteRs/index.html
-Microsoft Word and PowerPoint Documents Generation • ReporteRs package
-https://github.com/btel/svg_utils
-btel/svg_utils: Python tools to create and manipulate SVG files
-https://cran.r-project.org/web/packages/cowplot/index.html
-CRAN - Package cowplot
-https://cran.r-project.org/web/packages/cowplot/vignettes/plot_grid.html
-Arranging plots in a grid
-http://docutils.sourceforge.net/docs/ref/rst/directives.html#images
-reStructuredText Directives
-https://cran.r-project.org/web/packages/grImport/vignettes/import.pdf
-CMBX12 - import.pdf
-http://stackoverflow.com/questions/30227466/combine-several-images-horizontally-with-python
-Combine several images horizontally with Python - Stack Overflow
-http://stackoverflow.com/questions/4567409/python-image-library-how-to-combine-4-images-into-a-2-x-2-grid
-Python Image Library: How to combine 4 images into a 2 x 2 grid? - Stack Overflow
-https://pillow.readthedocs.io/en/4.0.x/
-Pillow — Pillow (PIL Fork) 4.0.0 documentation
-https://opencv-python-tutroals.readthedocs.io/en/latest/#
-Welcome to OpenCV-Python Tutorials’s documentation! — OpenCV-Python Tutorials 1 documentation
-http://cairosvg.org/
-CairoSVG
-https://github.com/astraw/svg_stack
-astraw/svg_stack: concatenate SVG files
-https://www.r-bloggers.com/a-quick-exploration-of-the-reporters-package/
-A quick exploration of the ReporteRs package | R-bloggers
+
+`Overview Inkscape`_
+
+.. _`Overview Inkscape`: https://inkscape.org/en/about/overview/
+
+
+`Ten Simple Rules for Better Figures`_
+
+.. _`Ten Simple Rules for Better Figures`: http://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1003833&type=printable
+
+
+`imagemagick - How can I convert a PNG to a PDF in high quality so it's not blurry or fuzzy? - Unix & Linux Stack Exchange`_
+
+.. _`imagemagick - How can I convert a PNG to a PDF in high quality so it's not blurry or fuzzy? - Unix & Linux Stack Exchange`: http://unix.stackexchange.com/questions/42856/how-can-i-convert-a-png-to-a-pdf-in-high-quality-so-its-not-blurry-or-fuzzy
+
+
+`Combine several images horizontally with Python - Stack Overflow`_
+
+.. _`Combine several images horizontally with Python - Stack Overflow`: http://stackoverflow.com/questions/30227466/combine-several-images-horizontally-with-python
+
+
+`Python Image Library: How to combine 4 images into a 2 x 2 grid? - Stack Overflow`_
+
+.. _`Python Image Library: How to combine 4 images into a 2 x 2 grid? - Stack Overflow`: http://stackoverflow.com/questions/4567409/python-image-library-how-to-combine-4-images-into-a-2-x-2-grid
