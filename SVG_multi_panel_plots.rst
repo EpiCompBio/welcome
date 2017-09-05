@@ -8,9 +8,6 @@ the `svgutils blog`_):
 2. Import figures you want into sgvutils
 3. Create legends, titles, layout, etc.
 4. Save multi-panel figure as svg
-
-You can then:
-
 5. Convert svg to pdf (with inkscape on the command line for example)
 6. Insert images into rst with image and other directives to create a file with text, figures, tables, etc. and which can later be converted to pdf or html.
 
@@ -139,8 +136,8 @@ Tables are a different matter altogether. You can `wrap figures in a table withi
 .. _`see this document`: http://mirrors.concertpass.com/tex-archive/info/svg-inkscape/InkscapePDFLaTeX.pdf
 
 
-With R
-++++++
+Packages in R
++++++++++++++
 
 grImport_ does something similar and can manipulate figures/images starting from PostScript:
 
