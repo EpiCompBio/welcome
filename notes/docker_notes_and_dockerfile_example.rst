@@ -216,11 +216,21 @@ An -it flag makes the container run interactively
 
 \--rm automatically remove the container when exiting
 
+Install a package:
+
+.. code-block:: bash
+
+        apt-get update
+        apt-get install vim
+
 Get the data (mount a volume) and point docker to it:
 
 .. code-block:: bash
 
 	docker run -it -d -p 8888:8888 -v /home/ubuntu/xxx:/Users/USER/data/datfile.data your_image_name
+        # or e.g.:
+        docker run -it -v $(pwd):/tmp DOCKER_IMAGE /bin/bash
+        docker run -it -v $(pwd):/anyname/ continuumio/miniconda3 bash
 
 
 \-p flag sets the ports (to access a Jupyter notebook server locally). To find Docker's ip address use:
@@ -231,8 +241,13 @@ docker-machine ip default #'default' for docker machine
 
 \-v specifies which directory on the local machine to store results
 
+Files get copied across after a certain period (?)
 
-Data/files can be copied across with docker cp
+Data/files can be copied across with docker cp:
+
+.. code-block:: bash
+
+	docker cp <containerId>:/file/path/within/container /host/path/target
 
 These will be lost when the container is stopped (but not results save locally) unless pre-specified in the Dockerfile.
 
@@ -323,7 +338,7 @@ Aggressive clean up:
 	docker rm $(docker ps -aq) # Delete all containers
 	
 	# A softer removal of containers:
-	docker rm $(docker ps -f "status=exited" -f "status=created" -q)
+	d
 
 You can then go back to your code, make changes, push/pull to your version control system and start again with Dockerfile to test your package in a different environment to your machine.
 
